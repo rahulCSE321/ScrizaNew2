@@ -83,6 +83,8 @@ import {
   BookOpen
 } from 'lucide-react'
 
+import Certification from '@/components/Certification'
+
 export default function SoftwareDevelopmentPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -624,8 +626,9 @@ export default function SoftwareDevelopmentPage() {
         </div>
       </section>
 
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>
   )
-}
+}   

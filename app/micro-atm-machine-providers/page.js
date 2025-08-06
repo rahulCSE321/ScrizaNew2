@@ -7,6 +7,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
+import Certification from '@/components/Certification'
 import { 
   ArrowRight,
   CheckCircle,
@@ -173,7 +174,7 @@ export default function MicroAtmMachineProvidersPage() {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Next-gen Payout Service Provider in India
                 </h2>
@@ -342,6 +343,7 @@ export default function MicroAtmMachineProvidersPage() {
         </div>
       </section>
 
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>

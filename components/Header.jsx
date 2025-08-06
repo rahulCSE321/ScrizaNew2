@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { 
   Menu, 
   X, 
@@ -17,6 +18,7 @@ export default function ModernHeader({ currentPage = "home" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +42,31 @@ export default function ModernHeader({ currentPage = "home" }) {
 
   const handleDropdownLeave = () => {
     setActiveDropdown(null)
+  }
+
+  const handleDemoSubmit = async (formData) => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: 'demo'
+        }),
+      })
+
+      if (response.ok) {
+        alert('Thank you! We will get back to you soon.')
+        setIsDemoModalOpen(false)
+      } else {
+        alert('Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Something went wrong. Please try again.')
+    }
   }
 
   return (
@@ -134,12 +161,12 @@ export default function ModernHeader({ currentPage = "home" }) {
                         <DropdownLink href="/payout-api-service">Payout Api</DropdownLink>
                         <DropdownLink href="/pay-in-service">Pay In Service</DropdownLink>
                         <DropdownLink href="/upi-collection-api">UPI Collection API</DropdownLink>
-                        <DropdownLink href="/credit-card-bill-payment">Credit Card BillPay Api</DropdownLink>
+                        <DropdownLink href="/credit-card-billpay-api">Credit Card BillPay Api</DropdownLink>
                       </DropdownSection>
 
                       {/* Other Services */}
                       <DropdownSection title="Other Services">
-                        <DropdownLink href="/recharge-api">Recharge Api</DropdownLink>
+                        <DropdownLink href="/recharge-api-provider">Recharge Api</DropdownLink>
                         <DropdownLink href="/bbps-api">BBPS Api</DropdownLink>
                         <DropdownLink href="/lic-premium-api">LIC Premium Pay Api</DropdownLink>
                         <DropdownLink href="/verification-api">Validation API</DropdownLink>
@@ -151,17 +178,17 @@ export default function ModernHeader({ currentPage = "home" }) {
                       <DropdownSection title="Travel Api">
                         <DropdownLink href="/bus-booking-api">Bus Booking API</DropdownLink>
                         <DropdownLink href="/hotel-booking-api">Hotel Booking API</DropdownLink>
-                        <DropdownLink href="/flight-booking-api">Air Booking API</DropdownLink>
+                        <DropdownLink href="/air-booking-api">Air Booking API</DropdownLink>
                       </DropdownSection>
 
                       {/* Verification Api */}
                       <DropdownSection title="Verification Api">
-                        <DropdownLink href="/bank-verification-api">Bank Ac Verification API</DropdownLink>
+                        <DropdownLink href="/bank-account-verification-api">Bank Ac Verification API</DropdownLink>
                         <DropdownLink href="/upi-verification-api">UPI ID Verification API</DropdownLink>
-                        <DropdownLink href="/aadhaar-verification-api">Aadhaar Verification API</DropdownLink>
-                        <DropdownLink href="/voter-id-verification-api">Voter Id Verification API</DropdownLink>
-                        <DropdownLink href="/driving-license-verification">Driving License Verification</DropdownLink>
-                        <DropdownLink href="/vehicle-rc-verification-api">Vehicle RC Verification API</DropdownLink>
+                        <DropdownLink href="/aadhaar-validation-api">Aadhaar Verification API</DropdownLink>
+                        <DropdownLink href="/voter-ID-verification-api">Voter Id Verification API</DropdownLink>
+                        <DropdownLink href="/driving-licence-verification-api">Driving License Verification</DropdownLink>
+                        <DropdownLink href="/vehicle-rc-verification">Vehicle RC Verification API</DropdownLink>
                       </DropdownSection>
                     </div>
                     
@@ -206,16 +233,16 @@ export default function ModernHeader({ currentPage = "home" }) {
         <DropdownLink href="/custom-software-development">
           Custom Software Development
         </DropdownLink>
-        <DropdownLink href="/website-design">
+        <DropdownLink href="/website-design-service">
           Website Design
         </DropdownLink>
-        <DropdownLink href="/software-development">
+        <DropdownLink href="/software-development-service">
           Software Development
         </DropdownLink>
-        <DropdownLink href="/application-development">
+        <DropdownLink href="/application-development-service">
           Application Development
         </DropdownLink>
-        <DropdownLink href="/digital-marketing">
+        <DropdownLink href="/digital-marketing-service">
           Digital Marketing
         </DropdownLink>
       </div>
@@ -230,15 +257,9 @@ export default function ModernHeader({ currentPage = "home" }) {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center">
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-[#38857a] to-[#FF914C] text-white hover:shadow-xl hover:scale-105 transition-all duration-300 relative overflow-hidden group"
-                onClick={() => {
-                  if (currentPage === "home") {
-                    document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})
-                  } else {
-                    window.location.href = '/#demo-section'
-                  }
-                }}
+                onClick={() => setIsDemoModalOpen(true)}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF914C] to-[#38857a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <span className="relative flex items-center space-x-2">
@@ -292,11 +313,7 @@ export default function ModernHeader({ currentPage = "home" }) {
                     className="w-full bg-gradient-to-r from-[#38857a] to-[#FF914C] text-white hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       setIsMenuOpen(false)
-                      if (currentPage === "home") {
-                        document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})
-                      } else {
-                        window.location.href = '/#demo-section'
-                      }
+                      setIsDemoModalOpen(true)
                     }}
                   >
                     <span className="flex items-center justify-center space-x-2">
@@ -310,6 +327,98 @@ export default function ModernHeader({ currentPage = "home" }) {
           </div>
         </div>
       </header>
+
+      {/* Demo Modal */}
+      <Dialog open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen}>
+        <DialogContent className="max-w-md mx-auto max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-center text-2xl font-bold text-gray-900">
+              Book Free Demo
+            </DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <div className="space-y-4">
+              <form onSubmit={(e) => {
+                e.preventDefault()
+                const formData = new FormData(e.target)
+                handleDemoSubmit({
+                  name: formData.get('name'),
+                  email: formData.get('email'),
+                  mobile: formData.get('mobile'),
+                  option: formData.get('option')
+                })
+              }} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name*
+                  </label>
+                  <input
+                    name="name"
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#38857a] focus:border-[#38857a]"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email*
+                  </label>
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#38857a] focus:border-[#38857a]"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Mobile Number*
+                  </label>
+                  <div className="flex">
+                    <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                      +91
+                    </span>
+                    <input
+                      name="mobile"
+                      required
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#38857a] focus:border-[#38857a]"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Select Option
+                  </label>
+                  <select
+                    name="option"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#38857a] focus:border-[#38857a]"
+                  >
+                    <option value="">---- Select Option ----</option>
+                    <option value="mobile-recharge">Mobile Recharge</option>
+                    <option value="dth-recharge">DTH Recharge</option>
+                    <option value="data-card">Data Card Recharge</option>
+                    <option value="multi-service">Multi-Service Platform</option>
+                    <option value="custom-solution">Custom Solution</option>
+                  </select>
+                </div>
+                
+                <div className="text-center text-sm text-gray-600 py-2">
+                  100% Privacy. We Don't Share Your Data.
+                </div>
+                
+                <Button 
+                  type="submit"
+                  className="w-full bg-[#38857a] hover:bg-[#38857a]/90 text-white"
+                >
+                  Book Demo
+                </Button>
+              </form>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   )
 }

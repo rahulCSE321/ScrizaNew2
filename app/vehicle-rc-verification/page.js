@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
+import Certification from '@/components/Certification'
 import { 
   CheckCircle,
   Send,
@@ -391,6 +392,7 @@ export default function VehicleRCVerificationAPIPage() {
         </div>
       </section>
 
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>

@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
+import Certification from '@/components/Certification'
 import { 
   Phone, 
   Mail, 
@@ -293,7 +294,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section> */}
-
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>

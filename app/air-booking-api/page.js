@@ -87,6 +87,8 @@ import {
   TrendingDown
 } from 'lucide-react'
 
+import Certification from '@/components/Certification'
+
 export default function AirBookingAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -540,6 +542,7 @@ export default function AirBookingAPIPage() {
         </div>
       </section>
 
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>

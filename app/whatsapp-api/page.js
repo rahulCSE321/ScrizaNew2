@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
+import Certification from '@/components/Certification'
 import { 
   CheckCircle,
   Send,
@@ -21,7 +22,7 @@ import {
   Heart,
   ShoppingCart,
   Truck,
-  Building2,
+  Building2,    
   Stethoscope,
   Home,
   Plane,
@@ -539,7 +540,8 @@ export default function WhatsAppAPIPage() {
         </div>
       </section>
 
-      <Footer />
+      <Certification />
+      <Footer />    
       <ChatWidget />
     </div>
   )

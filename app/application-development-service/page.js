@@ -84,6 +84,8 @@ import {
   Gamepad2
 } from 'lucide-react'
 
+import Certification from '@/components/Certification'
+
 export default function ApplicationDevelopmentPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -593,6 +595,7 @@ export default function ApplicationDevelopmentPage() {
         </div>
       </section>
 
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>

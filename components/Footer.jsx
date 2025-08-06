@@ -34,6 +34,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          
 
           {/* Quick Links */}
           <div>
@@ -46,10 +47,10 @@ export default function Footer() {
             </ul>
             <h4 className="text-lg font-semibold mt-8 mb-4" style={{color: '#FF914C'}}>Our Services</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Custom Software Development</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Website Designing</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Application Development</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Digital Marketing</a></li>
+              <li><a href="/custom-software-development" className="hover:text-[#38857a] transition-colors">Custom Software Development</a></li>
+              <li><a href="/website-design-service" className="hover:text-[#38857a] transition-colors">Website Designing</a></li>
+              <li><a href="/application-development" className="hover:text-[#38857a] transition-colors">Application Development</a></li>
+              <li><a href="/digital-marketing" className="hover:text-[#38857a] transition-colors">Digital Marketing</a></li>
             </ul>
           </div>
 
@@ -76,22 +77,22 @@ export default function Footer() {
             {/* Certifications */}
             <div className="mt-8">
               <div className="flex items-center space-x-4">
-                <div className="bg-white p-2 rounded">
+                {/* <div className="bg-white p-2 rounded">
                   <Shield className="h-6 w-6 text-[#38857a]" />
-                </div>
-                <div className="text-sm">
+                </div> */}
+                {/* <div className="text-sm">
                   <div className="text-white font-medium">QMS220756</div>
                   <div className="text-gray-400">ISO Certified</div>
-                </div>
+                </div> */}
               </div>
               <div className="flex items-center space-x-4 mt-4">
-                <div className="bg-white p-2 rounded">
+                {/* <div className="bg-white p-2 rounded">
                   <Award className="h-6 w-6 text-[#FF914C]" />
-                </div>
-                <div className="text-sm">
+                </div> */}
+                {/* <div className="text-sm">
                   <div className="text-white font-medium">ISMS220754</div>
                   <div className="text-gray-400">Security Certified</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -104,9 +105,9 @@ export default function Footer() {
               © 2024 Scriza Pvt Ltd. All Rights Reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-[#38857a] transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-[#38857a] transition-colors">Terms and Conditions</a>
-              <a href="#" className="hover:text-[#38857a] transition-colors">Refund & Cancellation Policy</a>
+              <a href="privacy-policy" className="hover:text-[#38857a] transition-colors">Privacy Policy</a>
+              <a href="term-conditions" className="hover:text-[#38857a] transition-colors">Terms and Conditions</a>
+              <a href="refund-and-cancellation-policy" className="hover:text-[#38857a] transition-colors">Refund & Cancellation Policy</a>
               <a href="#" className="hover:text-[#38857a] transition-colors">Sitemap</a>
             </div>
           </div>

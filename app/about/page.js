@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
+import Certification from '@/components/Certification'
 import { 
   Phone, 
   Mail, 
@@ -288,7 +289,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-center items-center space-x-12">
             <div className="flex items-center space-x-4">
@@ -312,8 +313,8 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <Certification />
       <Footer />
       <ChatWidget />
     </div>
