@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -308,6 +309,33 @@ export default function CustomSoftwareDevelopmentPage() {
           <DemoBookingForm onSubmit={handleDemoSubmit} />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ 
+        title="Custom Software Development FAQ"
+        faqs={[
+          {
+            question: "What is custom software development?",
+            answer: "Custom software development is the process of creating software applications specifically designed to meet the unique requirements of your business. Unlike off-the-shelf software, custom solutions are built from scratch to address your specific challenges and workflows."
+          },
+          {
+            question: "How long does it take to develop custom software?",
+            answer: "The development timeline varies depending on the complexity and scope of your project. Simple applications can take 3-6 months, while complex enterprise solutions may take 8-18 months. We provide detailed project timelines during the planning phase."
+          },
+          {
+            question: "What technologies do you use?",
+            answer: "We use modern, industry-standard technologies including React, Node.js, Python, Java, .NET, cloud platforms (AWS, Azure), and various databases. Our technology stack is chosen based on your specific requirements and business goals."
+          },
+          {
+            question: "Do you provide ongoing support and maintenance?",
+            answer: "Yes, we offer comprehensive post-launch support including bug fixes, security updates, feature enhancements, and technical support. We provide different maintenance packages to suit your needs and budget."
+          },
+          {
+            question: "How much does custom software development cost?",
+            answer: "The cost varies based on project complexity, features, technology stack, and timeline. We provide detailed quotes after understanding your requirements. Our pricing is competitive and transparent with no hidden costs."
+          }
+        ]}
+      />
 
       <Certification />
       <Footer />

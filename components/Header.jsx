@@ -72,20 +72,19 @@ export default function ModernHeader({ currentPage = "home" }) {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-[#38857a] text-white py-2 text-sm">
+      <div className="bg-[#38857a] text-white py-2 text-xs sm:text-sm hidden sm:block">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>sales@scriza.in</span>
+            <div className="flex items-center space-x-3 sm:space-x-6">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="truncate">sales@scriza.in</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>+91 911 6011 899</span>
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="truncate">+91 911 6011 899</span>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -97,14 +96,14 @@ export default function ModernHeader({ currentPage = "home" }) {
           : 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100'
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-4 group">
               <div className="relative">
                 <img 
                   src="/Scriza (1).svg" 
                   alt="Scriza Logo" 
-                  className="relative h-14 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-lg"
+                  className="relative h-10 sm:h-14 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-lg"
                 />
               </div>
             </div>
@@ -228,7 +227,7 @@ export default function ModernHeader({ currentPage = "home" }) {
   >
     <div className="bg-white/95 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-2xl overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#38857a]/5 to-[#FF914C]/5"></div>
-      <div className="relative grid grid-cols-1 gap-4 p-6">
+      <ul className="relative grid grid-cols-1 gap-4 p-6 list-none">
         {/* Core service links */}
         <DropdownLink href="/custom-software-development">
           Custom Software Development
@@ -245,7 +244,7 @@ export default function ModernHeader({ currentPage = "home" }) {
         <DropdownLink href="/digital-marketing-service">
           Digital Marketing
         </DropdownLink>
-      </div>
+      </ul>
     </div>
   </div>
 </div>
@@ -473,7 +472,7 @@ function DropdownSection({ title, children }) {
       <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider bg-gradient-to-r from-[#38857a] to-[#FF914C] bg-clip-text text-transparent">
         {title}
       </h3>
-      <ul className="space-y-3">
+      <ul className="space-y-3 list-none">
         {children}
       </ul>
     </div>

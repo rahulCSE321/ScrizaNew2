@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   ArrowRight,
   CheckCircle,
@@ -378,6 +379,23 @@ export default function HotelManagementSoftwarePage() {
         </div>
       </section>
 
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Why Is it worth investing in hotel management software?",
+            answer: "Yes, it is definitely worth it because software technology automates and streamlines various hotel management tasks. Reduce the risk of manual errors and improve your revenue by using highly advanced hotel management software for various tasks like reservations, guest management, billing, reporting, and more."
+          },
+          {
+            question: "Is your property management software reliable?",
+            answer: "We develop software with compliance regulations in mind. Over 500 hoteliers across India have faith in our offered technology solutions. Features like robust data encryption, access controls, and backup systems ensure the safety of your sensitive information."
+          },
+          {
+            question: "Can you customize the resort management software?",
+            answer: "Scriza is rated as the #1 software development agency for the offered benefit of customization. We are specialists in catering to your specific requirements regarding configuration, pricing rules, guest preferences, or integration with other systems. Connect now to discuss your unique needs."
+          },
+        ]}
+      />
       <Certification />
       <Footer />
       <ChatWidget />

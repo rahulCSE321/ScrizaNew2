@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   ArrowRight,
   CheckCircle,
@@ -370,6 +371,23 @@ export default function AepsApiPage() {
         </div>
       </section>
 
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is an AePS service provider?",
+            answer: "A school management system features various modules that can be operated through a user-friendly interface. Get in touch with us to learn more about the cloud based secure school management technology."
+          },
+          {
+            question: "How to integrate the AePS feature into my application?",
+            answer: "To get the AePS capabilities, you can connect with us. We are the most trusted AePS API service providers, offering the most affordable, secure and timely delivered payment solutions",
+          },
+          {
+            question:"How much does it cost to develop the AePS API?",
+            answer:"The cost of AePS API development at Scriza is extremely affordable. Rest assured, you won’t have to burn a hole in your pocket. We offer API integration services for all sizes of businesses. Connect now to learn more about our pricing structure.",
+          }
+        ]}
+      />
       <Certification />
       <Footer />
       <ChatWidget />

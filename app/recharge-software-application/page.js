@@ -9,6 +9,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   Users, 
   Star,
@@ -395,10 +396,20 @@ export default function RechargeSoftwarePage() {
           </div>
         </div>
       </section> */}
-
+       
+       <FAQ 
+  title="Your Custom Title"
+  faqs={[
+    {
+      question: "Your question here?",
+      answer: "Your detailed answer here."
+    }
+  ]}
+/>
       <Certification />
       <Footer />
       <ChatWidget />
+      
     </div>
   )
 }

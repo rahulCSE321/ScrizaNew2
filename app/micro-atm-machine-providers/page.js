@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ' 
 import { 
   ArrowRight,
   CheckCircle,
@@ -342,6 +343,23 @@ export default function MicroAtmMachineProvidersPage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "Why choose our AePS software solution?",
+            answer: "We have become a preferred choice for AePS API because it enables secure financial transactions using an Aadhaar card and biometric authentication. With game-changing technology, we can serve rural populations. The AePS enables users to conveniently withdraw cash without an account number, making it a safe and accessible payment solution."
+          },
+          {
+            question: "What makes our MoPos Software India’s #1 payment method?",
+            answer: "Our MoPos software boasts a user-friendly interface. It supports multiple payment methods, real-time transaction processing, inventory management, sales reporting, customer engagement, and reliable customer support. Hence, it is a comprehensive solution for easy mobile point-of-sale operations."
+          },
+          {
+            question: "What are the business benefits of our mATM software development services?",
+            answer: "Our mATM software development services are renowned for increased customer convenience. You can easily expand your financial service offerings and improve operational efficiency. With features like enhanced security measures and seamless integration our offered software solution becomes the most beneficial for all sizes of businesses."
+          },
+        ]}
+      />
 
       <Certification />
       <Footer />

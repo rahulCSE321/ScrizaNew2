@@ -10,19 +10,19 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-16">
+    <footer id="contact" className="bg-gray-900 text-white py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-4 mb-6">
+            <div className="flex items-center space-x-4 mb-4 md:mb-6">
               <img 
                 src="/Scriza (1).svg" 
                 alt="Scriza Logo" 
-                className="h-12 w-auto"
+                className="h-8 md:h-12 w-auto"
               />
             </div>
-            <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
+            <p className="text-gray-300 leading-relaxed mb-4 md:mb-6 max-w-md text-sm md:text-base">
               We at Scriza are experts in software development, starting from scratch and building it from the ground up. We understand that not all projects are the same, and that's why we take the time to get to know you and your project before we begin.
             </p>
             <div className="flex space-x-4">
@@ -99,12 +99,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-700 pt-6 md:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © 2024 Scriza Pvt Ltd. All Rights Reserved.
             </div>
-            <div className="flex space-x-6 text-sm text-gray-400">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs md:text-sm text-gray-400">
               <a href="privacy-policy" className="hover:text-[#38857a] transition-colors">Privacy Policy</a>
               <a href="term-conditions" className="hover:text-[#38857a] transition-colors">Terms and Conditions</a>
               <a href="refund-and-cancellation-policy" className="hover:text-[#38857a] transition-colors">Refund & Cancellation Policy</a>
