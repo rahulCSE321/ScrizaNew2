@@ -49,7 +49,7 @@ export default function App() {
   })
 
   // Blog slider state
-  const [currentBlogSlide, setCurrentBlogSlide] = useState(0)
+  const [currentBlogSlide, setCurrentBlogSlide] = useState(0) 
   const [blogSlidesPerView, setBlogSlidesPerView] = useState(3)
 
   // Blog slider functions
