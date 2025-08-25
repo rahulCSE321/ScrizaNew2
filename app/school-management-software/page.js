@@ -395,6 +395,7 @@ export default function SchoolManagementSoftwarePage() {
             question: "What are the benefits of using software for school management?",
             answer: "Invest in a school management software technology and experience benefits like cost savings, improved data accuracy, and efficient administrative processes."
           }
+          
         ]}
       />
       <Certification />

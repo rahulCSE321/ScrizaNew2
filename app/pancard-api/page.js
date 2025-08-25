@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'  
 import { 
   ArrowRight,
   CheckCircle,
@@ -379,6 +380,15 @@ export default function PancardApiPage() {
       <Certification />
       <Footer />
       <ChatWidget />
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "How does school management software work?",
+            answer: "A school management system features various modules that can be operated through a user-friendly interface. Get in touch with us to learn more about the cloud based secure school management technology."
+          },
+        ]}
+      />
     </div>
   )
 }
