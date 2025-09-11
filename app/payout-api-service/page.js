@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   ArrowRight,
   CheckCircle,
@@ -398,6 +399,31 @@ export default function PayoutApiServicePage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Payout Service?",
+            answer: "A Payout Service is a financial service that enables businesses to send bulk payments directly to their vendors, employees, partners, or customers. It helps automate and simplify large-scale transactions such as salary payments, vendor disbursements, commission payments, refunds, and more."
+          },
+          {
+            question: "Who can use Payout Services?",
+            answer: "Our payout services are ideal for:E-commerce businessesFintech companiesDigital wallet providersInsurance firmsLoan disbursal companiesPayroll management service providersAny organization that needs to make bulk payments frequently"
+          },
+          {
+            question: "What types of payout methods are supported?",
+            answer: "We support multiple payout channels for maximum flexibility:Bank transfers (NEFT, RTGS, IMPS)UPI payoutsWallet transfersPrepaid card payoutsAadhaar-based payouts (AEPS)Mobile recharge & bill payments"
+          },
+          {
+            question: "How does the payout process work?",
+            answer: "Upload the payout file with details (beneficiary name, account number, amount, etc.).The system validates the file for errors.Once approved, payouts are processed via the selected payment method.Real-time status updates are provided (Success, Pending, Failed).Detailed payout reports are generated for reconciliation."
+          },
+          {
+            question: "Is bulk payout secure?",
+            answer: "Yes, security is our top priority. Our platform uses industry-standard encryption and secure APIs to process transactions. All payouts are governed by regulatory compliance such as KYC, AML, and RBI guidelines in India."
+          }
+        ]}
+      />
 
       <Certification />
       <Footer />

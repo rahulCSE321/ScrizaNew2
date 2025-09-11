@@ -8,7 +8,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'
+  
+import {
   ArrowRight,
   CheckCircle,
   Clock,
@@ -18,7 +20,7 @@ import {
   Globe,
   Users,
   CreditCard,
-  TrendingUp,   
+  TrendingUp,
   Star,
   Building,
   Send,
@@ -95,7 +97,7 @@ export default function FintechSoftwarePage() {
           message: `Fintech Software Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -109,7 +111,7 @@ export default function FintechSoftwarePage() {
 
   const fintechChallenges = [
     "Basic Auth, Auth 1, Auth 2",
-    "Cybersecurity Threats", 
+    "Cybersecurity Threats",
     "Compliance requirements",
     "Ever evolving landscape",
     "Staying ahead of the competition"
@@ -310,10 +312,10 @@ export default function FintechSoftwarePage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/fintech.png" 
-            alt="Fintech Software" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/fintech.png"
+            alt="Fintech Software"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -335,7 +337,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   At Scriza, we have helped over 500 clients from the fintech industry. We are confident enough in our technology advancements that we can develop a custom solution to empower your fintech business.
                 </p>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   Our software development expertise enables you to tackle the following challenges head-on:
                 </p>
@@ -362,7 +364,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   With a track record of creating dozens of fintech software applications, Scriza becomes the top-rated choice for custom development services. Below are the top 7 reasons to consider our custom software development services.
                 </p>
-                
+
                 <div className="space-y-6">
                   {customDevelopmentReasons.map((reason, index) => (
                     <div key={index} className="space-y-4">
@@ -392,7 +394,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our software development services include myriads of solutions to outperform in the fintech industry.
                 </p>
-                
+
                 <div className="space-y-8">
                   {softwareServices.map((service, index) => (
                     <div key={index} className="space-y-4">
@@ -416,7 +418,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our offered software features diverse applications across the fintech software, such as:
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   {fintechApplications.map((application, index) => (
                     <div key={index} className="space-y-4">
@@ -437,7 +439,7 @@ export default function FintechSoftwarePage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Unmatched features of our fintech application development services
                 </h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   {unmatchedFeatures.map((feature, index) => (
                     <div key={index} className="space-y-4">
@@ -461,7 +463,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   A wide range of solutions are available to serve the financial technology industry. Some of the types of fintech software development provided by us include:
                 </p>
-                
+
                 <div className="space-y-8">
                   {softwareTypes.map((type, index) => (
                     <div key={index} className="space-y-4">
@@ -485,7 +487,7 @@ export default function FintechSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We stand out in the industry due to the following compelling reasons:
                 </p>
-                
+
                 <div className="space-y-8">
                   {whyChooseUs.map((reason, index) => (
                     <div key={index} className="space-y-4">
@@ -510,10 +512,10 @@ export default function FintechSoftwarePage() {
                 <p className="text-white/90 mb-6">
                   Get in touch right now to embark on the journey toward growth and profitability with our cutting-edge fintech software solutions.
                 </p>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-[#38857a] hover:bg-white/90"
-                  onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                  onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Schedule Free Demo
                   <Send className="ml-2 h-5 w-5" />
@@ -522,14 +524,56 @@ export default function FintechSoftwarePage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Fintech Software Development?",
+            answer: "Fintech Software Development involves creating technology-driven solutions for the financial industry. This includes banking apps, payment platforms, digital wallets, investment platforms, lending software, and other solutions that automate financial operations, improve customer experience, and ensure regulatory compliance."
+          },
+          {
+            question: "Who should use Fintech Software Development services?",
+            answer: "Our services are ideal for: Banks and financial institutions, Fintech startups, Payment gateway providers, Lending and investment platforms, Insurance companies, Accounting and bookkeeping solution providers, and Any business looking to digitize financial operations or create innovative financial products."
+          },
+          {
+            question: "What types of Fintech software do you develop?",
+            answer: "We develop a wide range of Fintech solutions, including: Mobile banking and payment apps, Digital wallets and UPI apps, Online lending and loan management platforms, Investment and trading platforms, Accounting, bookkeeping, and invoicing software, Peer-to-peer (P2P) payment systems, Cryptocurrency wallets and blockchain-based financial apps, and Financial analytics and reporting tools."
+          },
+          {
+            question: "How does your Fintech software development process work?",
+            answer: "Our process includes: Requirement Analysis, Planning & Design (wireframes, UI/UX, roadmap), Development with secure and scalable coding, Rigorous testing (functional, performance, security), Deployment in production with secure hosting, and Maintenance with updates and compliance checks."
+          },
+          {
+            question: "How do you ensure security in Fintech software?",
+            answer: "Security is our top priority. We implement: End-to-end encryption (SSL/TLS, AES), Multi-factor authentication (MFA), Role-based access control, Regular security audits and penetration testing, and Compliance with PCI DSS, GDPR, RBI guidelines, and other regulations."
+          },
+          {
+            question: "Can Fintech software integrate with other financial services?",
+            answer: "Yes, we provide seamless integration with: Banks and payment gateways, Credit bureaus and KYC/AML services, Accounting and ERP systems, Third-party APIs for investments, trading, or insurance, and Blockchain/cryptocurrency platforms."
+          },
+          {
+            question: "How long does it take to develop Fintech software?",
+            answer: "Timelines vary depending on complexity: Simple apps (digital wallets, payment apps): 2–4 months, Medium solutions (loan management, investment platforms): 4–8 months, Large-scale enterprise systems (core banking, multi-bank integrations): 6–12+ months. Final timelines are provided after requirement analysis."
+          },
+          {
+            question: "Can the software be scalable for future growth?",
+            answer: "Yes, our solutions are built with scalability in mind: Cloud-ready architecture, Microservices for modular expansion, Database optimization for large data volumes, and Integration-ready design for adding new features or services."
+          },
+          {
+            question: "Do you provide regulatory compliance support?",
+            answer: "Yes, we ensure compliance with financial regulations including: RBI and SEBI guidelines, PCI DSS for payments, GDPR for data privacy, and KYC/AML requirements. We collaborate with your compliance team to meet all necessary standards."
+          }
+        ]}
+      />
+
 
       <Certification />
       <Footer />

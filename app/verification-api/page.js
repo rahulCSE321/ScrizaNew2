@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -83,7 +84,7 @@ export default function VerificationAPIPage() {
           message: `Verification API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -97,7 +98,7 @@ export default function VerificationAPIPage() {
 
   const verificationServices = [
     "KYC Verification",
-    "Aadhaar Verification", 
+    "Aadhaar Verification",
     "PAN Card Validation",
     "Voter ID Verification",
     "Driving License",
@@ -108,7 +109,7 @@ export default function VerificationAPIPage() {
 
   const customerBenefits = [
     "Unlock growth opportunities by accelerating digital KYC process",
-    "Powerful and adaptable digital solutions with 99.99% uptime", 
+    "Powerful and adaptable digital solutions with 99.99% uptime",
     "Seamless onboarding experience with multiple verification options"
   ]
 
@@ -198,10 +199,10 @@ export default function VerificationAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/verification-api-hero.png" 
-            alt="Verification API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/verification-api-hero.png"
+            alt="Verification API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -254,7 +255,7 @@ export default function VerificationAPIPage() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   A strong and reliable solution to quickly onboard users
                 </p>
-                
+
                 <div className="space-y-8">
                   {kycVerificationAPIs.map((api, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -281,8 +282,8 @@ export default function VerificationAPIPage() {
                           </Button>
                         </div>
                         <div className="flex items-center justify-center">
-                          <img 
-                            src={api.image} 
+                          <img
+                            src={api.image}
                             alt={api.title}
                             className="w-full max-w-sm h-auto rounded-lg shadow-sm"
                           />
@@ -301,7 +302,7 @@ export default function VerificationAPIPage() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Verify and onboard customers using any device or platform
                 </p>
-                
+
                 <div className="space-y-8">
                   {businessVerificationAPIs.map((api, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -328,8 +329,8 @@ export default function VerificationAPIPage() {
                           </Button>
                         </div>
                         <div className="flex items-center justify-center">
-                          <img 
-                            src={api.image} 
+                          <img
+                            src={api.image}
                             alt={api.title}
                             className="w-full max-w-sm h-auto rounded-lg shadow-sm"
                           />
@@ -348,7 +349,7 @@ export default function VerificationAPIPage() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   A strong and reliable solution to quickly onboard users
                 </p>
-                
+
                 <div className="space-y-8">
                   {bankingAPIs.map((api, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -375,8 +376,8 @@ export default function VerificationAPIPage() {
                           </Button>
                         </div>
                         <div className="flex items-center justify-center">
-                          <img 
-                            src={api.image} 
+                          <img
+                            src={api.image}
                             alt={api.title}
                             className="w-full max-w-sm h-auto rounded-lg shadow-sm"
                           />
@@ -438,16 +439,16 @@ export default function VerificationAPIPage() {
                   Get started today with our robust verification APIs and experience the difference that two decades of excellence can make for your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Schedule Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -459,15 +460,15 @@ export default function VerificationAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
-
+      
       <Certification />
       <Footer />
       <ChatWidget />

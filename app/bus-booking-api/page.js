@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'  
 import { 
   CheckCircle,
   Send,
@@ -569,6 +570,40 @@ export default function BusBookingAPIPage() {
           </div>
         </div>
       </section>
+      <FAQ
+  title="Frequently Asked Questions"
+  faqs={[
+    {
+      question: "What is a Bus Booking API?",
+      answer: "The Bus Booking API enables businesses to integrate online bus ticket booking functionality into their applications, websites, or software platforms. It provides real-time access to bus schedules, seat availability, fare details, ticket booking, cancellations, and ticket confirmation in a seamless, automated manner."
+    },
+    {
+      question: "Who should use the Bus Booking API?",
+      answer: "Our Bus Booking API is ideal for: Travel aggregators, Online ticket booking platforms, Travel agencies, Tour operators, Mobile apps providing travel services, Any business aiming to offer online bus ticket booking services."
+    },
+    {
+      question: "What services are provided by the Bus Booking API?",
+      answer: "Search available bus routes between origin and destination, View seat layouts and fare details, Real-time seat availability check, Instant bus ticket booking, Ticket cancellation and refund processing, Generate and retrieve e-tickets, PNR status check, Schedule and route information."
+    },
+    {
+      question: "How does the Bus Booking API work?",
+      answer: "The customer enters origin, destination, and date of travel on your platform. The API fetches real-time bus schedules, fares, and seat availability from multiple bus operators. The customer selects the desired bus and seats. The API processes the booking, confirms seat availability, and generates an e-ticket. The ticket confirmation is sent instantly with a PNR number and ticket details. Booking, cancellation, and refund workflows are handled via the API."
+    },
+    {
+      question: "Is the Bus Booking API secure?",
+      answer: "Yes, security is ensured by: HTTPS encryption for all API calls, Token-based API authentication, Compliance with PCI-DSS for payment processing, Secure storage of sensitive customer data, Regular security audits and data protection mechanisms."
+    },
+    {
+      question: "How fast is the booking and ticket confirmation?",
+      answer: "Bus ticket bookings and confirmations are processed in real time (usually within a few seconds). Instant PNR generation and e-ticket delivery are available via API response and email (if configured)."
+    },
+    {
+      question: "Can customers cancel their booked tickets using the API?",
+      answer: "Yes, the Bus Booking API supports: Full and partial ticket cancellations as per the bus operator’s cancellation policy, Automated refund process where applicable, Real-time cancellation confirmation via API response and webhook."
+    },
+  ]}
+/>
+
 
       <Certification />
       <Footer />

@@ -375,17 +375,21 @@ export default function AepsApiPage() {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "What is an AePS service provider?",
-            answer: "A school management system features various modules that can be operated through a user-friendly interface. Get in touch with us to learn more about the cloud based secure school management technology."
+            question: "What is AePS API Service?",
+            answer: "AePS (Aadhaar Enabled Payment System) API Service allows businesses, retailers, and fintech providers to offer Aadhaar-based banking services such as cash withdrawal, balance inquiry, mini statement, and fund transfer through biometric authentication."
           },
           {
-            question: "How to integrate the AePS feature into my application?",
-            answer: "To get the AePS capabilities, you can connect with us. We are the most trusted AePS API service providers, offering the most affordable, secure and timely delivered payment solutions",
+            question: "What services can be provided through AePS API?",
+            answer: "Using AePS API, you can provide: Cash Withdrawal Balance Inquiry Mini Statement Aadhaar-to-Aadhaar Fund Transfer Aadhaar Pay (merchant payments)"
+          },
+          { 
+            question: "Who can use AePS API Service?",
+            answer: "AePS API can be used by: Fintech companies Micro ATM & CSP operators Banking service providers Retailers & distributors Entrepreneurs running digital financial services"
           },
           {
-            question:"How much does it cost to develop the AePS API?",
-            answer:"The cost of AePS API development at Scriza is extremely affordable. Rest assured, you won’t have to burn a hole in your pocket. We offer API integration services for all sizes of businesses. Connect now to learn more about our pricing structure.",
-          }
+            question: "How secure is AePS API Service?",
+            answer: "AePS is highly secure as it uses Aadhaar number with biometric (fingerprint/iris) authentication, approved by NPCI (National Payments Corporation of India), ensuring safe and verified transactions."
+          },
         ]}
       />
       <Certification />

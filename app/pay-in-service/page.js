@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -404,6 +405,34 @@ export default function PayInServicePage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Pay-in Service?",
+            answer: "A Pay-in Service enables businesses to collect payments from their customers through multiple payment methods, including bank transfers, UPI, cards, wallets, and other digital payment options. It helps businesses accept payments seamlessly and securely from anywhere, anytime."
+          },
+          {
+            question: "Who can use Pay-in Services?",
+            answer: "Our Pay-in services are ideal for:E-commerce platformsSubscription-based businessesUtility and bill payment providersEducational institutionsTravel and ticket booking platformsDigital marketplacesAny business that needs to collect customer payments online or offline"
+          },
+          {
+            question: "What payment methods are supported for Pay-in?",
+            answer: "We support multiple payment modes to ensure maximum convenience:UPI (Unified Payments Interface)Debit & Credit Cards (Visa, MasterCard, Rupay, etc.)Net Banking (IMPS, NEFT)Wallet Payments (Paytm, PhonePe, Mobikwik, etc.)QR Code-based PaymentsPrepaid Card Reload"
+          },
+          {
+            question: "How does the Pay-in process work?",
+            answer: "The customer initiates a payment through the merchant’s website, app, or point-of-sale system.The pay-in service securely processes the payment through the selected mode (UPI, Card, etc.).Once authorized, the payment is settled into the merchant’s account.The merchant receives real-time payment status and detailed reports."
+          },
+          {
+            question: "Is the Pay-in process secure?",
+            answer: "Absolutely. All payment transactions are encrypted end-to-end and comply with PCI-DSS standards. We follow RBI guidelines, two-factor authentication, and OTP-based verification for secure customer payments."
+          }
+        ]}
+      />
+
+      
+
 
       <Certification />
       <Footer />

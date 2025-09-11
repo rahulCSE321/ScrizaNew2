@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -493,6 +494,42 @@ export default function LICPremiumAPIPage() {
           </div>
         </div>
       </section>
+
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is LIC API?",
+            answer: "The LIC API enables businesses, insurance aggregators, fintech platforms, and agents to integrate Life Insurance Corporation (LIC) services into their digital applications or software systems. It provides seamless access to LIC policy issuance, premium payment, policy status inquiry, and other LIC-related services in a secure and automated manner."
+          },
+          {
+            question: "Who should use the LIC API?",
+            answer: "Our LIC API is designed for:Insurance aggregatorsFintech companiesDigital wallet and payment platformsAgents and brokersE-commerce platforms offering insurance servicesAny business that wants to offer LIC-related services to customers"
+          },
+          {
+            question: "What services are provided by the LIC API?",
+            answer: "The LIC API provides seamless access to LIC policy issuance, premium payment, policy status inquiry, and other LIC-related services in a secure and automated manner."
+          },
+          {
+            question: "How does the LIC API work?",
+            answer: "The customer selects LIC services (e.g., policy purchase, premium payment).The API sends a request to LIC’s system to fetch available plans or policy details.For policy purchase or premium payment, the customer enters necessary data (personal details, policy number, amount, etc.).The API securely processes the transaction in real time.A confirmation response with a policy number, payment status, or document URL is returned instantly."
+          },
+          {
+            question: "Is the LIC API secure?",
+            answer: "Yes, our API follows strict security protocols:End-to-end HTTPS encryptionToken-based authentication for secure API callsCompliance with IRDAI (Insurance Regulatory and Development Authority of India) regulationsSecure storage of sensitive customer and policy dataRegular security audits"
+          },
+          {
+            question: "How fast is the policy issuance or premium payment process?",
+            answer: "LIC policy issuance and premium payments are processed in real time or within minutes.Policy document generation may take some time (from a few minutes to a few hours) depending on LIC’s internal processing.Payment confirmation and status updates are available instantly via API response or webhook."
+          },
+          {
+            question: "What happens if a payment or policy issuance fails?",
+            answer: "In case of failure due to invalid input, insufficient funds, or system errors, the API returns a specific error code with a message.No amount is debited in case of failed transactions.Businesses can handle retries or prompt customers accordingly."
+          }
+        ]}
+      />
+
+
 
       <Certification />
       <Footer />

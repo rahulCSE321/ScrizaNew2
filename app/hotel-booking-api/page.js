@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'
+import {
   CheckCircle,
   Send,
   Zap,
@@ -104,7 +105,7 @@ export default function HotelBookingAPIPage() {
           message: `Hotel Booking API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -118,7 +119,7 @@ export default function HotelBookingAPIPage() {
 
   const hotelApiFeatures = [
     "Easy Integration",
-    "Real-time Data", 
+    "Real-time Data",
     "Customizable Search",
     "Instant Booking",
     "Multi-Currency Support",
@@ -144,7 +145,7 @@ export default function HotelBookingAPIPage() {
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "99% API Availability Rate",  
+      title: "99% API Availability Rate",
       description: "Guaranteed uptime with robust infrastructure ensuring your booking system is always operational.",
       stat: "99%",
       label: "Uptime"
@@ -186,7 +187,7 @@ export default function HotelBookingAPIPage() {
     },
     {
       icon: <Calendar className="h-8 w-8" />,
-      title: "Instant Booking and Confirmation", 
+      title: "Instant Booking and Confirmation",
       description: "Users can book rooms instantly through the API, with automated confirmation processes. Great user experience with immediate booking status.",
       features: ["Instant Booking", "Auto Confirmation", "Immediate Status", "Great UX"]
     },
@@ -206,7 +207,7 @@ export default function HotelBookingAPIPage() {
     },
     {
       icon: <ShieldCheck className="h-8 w-8" />,
-      title: "Authentication", 
+      title: "Authentication",
       description: "Authenticate your API requests using OAuth tokens or API keys for security. This ensures only authorized access to your system for safe transactions."
     },
     {
@@ -238,7 +239,7 @@ export default function HotelBookingAPIPage() {
       description: "Benefit from transparent pricing so you can budget effectively and plan for growth"
     },
     {
-      icon: <TrendingUp className="h-6 w-6" />, 
+      icon: <TrendingUp className="h-6 w-6" />,
       title: "Increase your ROI",
       description: "Cost-effective solutions give great returns by streamlining booking processes"
     },
@@ -249,7 +250,7 @@ export default function HotelBookingAPIPage() {
     },
     {
       icon: <Layers className="h-6 w-6" />,
-      title: "Flexible pricing plans", 
+      title: "Flexible pricing plans",
       description: "Pricing plans tailored to your needs, ensuring cost-efficiency without compromising quality"
     },
     {
@@ -261,7 +262,7 @@ export default function HotelBookingAPIPage() {
 
   const clientTypes = [
     "Travel Agencies",
-    "Online Portals", 
+    "Online Portals",
     "Corporate Travel Management",
     "Event Platforms",
     "Hospitality Software Developers",
@@ -277,10 +278,10 @@ export default function HotelBookingAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/hotel-booking-api-hero.png" 
-            alt="Hotel Booking API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/hotel-booking-api-hero.png"
+            alt="Hotel Booking API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -299,7 +300,7 @@ export default function HotelBookingAPIPage() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Handle bookings from Tokyo to New York with our multi-currency API
                 </p>
-                
+
                 <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-4 mb-8">
                   <p className="text-lg font-semibold text-red-800 mb-2">Are you still struggling with the outdated booking system?</p>
                 </div>
@@ -441,7 +442,7 @@ export default function HotelBookingAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Easy to use technology that needs no prior experience. Our hotel booking system API is designed to make booking smoother and more efficient for you. The entire process turns out to be a hassle-free experience.
                 </p>
-                
+
                 <div className="space-y-6">
                   {howToUseSteps.map((step, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -473,7 +474,7 @@ export default function HotelBookingAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Choose our hotel booking API to optimize your business operations. Our cost effective API solutions are rated as the best to deliver exceptional value to your customers.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {pricingBenefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -499,16 +500,16 @@ export default function HotelBookingAPIPage() {
                   Not only this, with Scriza clients are empowered to optimize costs with transparent pricing and scalable solutions. Book accommodations effortlessly with our user-friendly API.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Schedule Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -520,14 +521,52 @@ export default function HotelBookingAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Hotel Booking API?",
+            answer: "A Hotel Booking API enables businesses to integrate real-time hotel search, availability, pricing, booking, cancellation, and reservation management services into their applications, websites, or software systems. It provides seamless access to a large inventory of hotels across multiple destinations."
+          },
+          {
+            question: "Who should use the Hotel Booking API?",
+            answer: "Our Hotel Booking API is ideal for: Travel aggregators, Online travel agencies (OTAs), Tour operators, Travel management companies, Hospitality platforms, Mobile apps providing hotel booking services, Any business aiming to offer online hotel booking functionality."
+          },
+          {
+            question: "What services are provided by the Hotel Booking API?",
+            answer: "Real-time search of available hotels by location, check-in/check-out date, and guest details, View hotel room types, availability, prices, and amenities, Instant room booking and confirmation, Booking cancellation and refund processing, Booking modification (date changes, guest details update), Retrieve and download booking confirmation and invoice, Retrieve hotel images, ratings, and reviews, Dynamic pricing and inventory updates."
+          },
+          {
+            question: "How does the Hotel Booking API work?",
+            answer: "The customer enters destination, check-in/check-out dates, and number of guests. The API searches multiple hotel partners for available inventory in real time. The customer selects a hotel and room type. The API confirms availability and shows the final price. The customer makes a payment via integrated payment gateway. Booking is confirmed instantly, and an e-confirmation (voucher) is generated. Booking details and status can be retrieved any time using the API."
+          },
+          {
+            question: "Is the Hotel Booking API secure?",
+            answer: "Yes, we ensure: HTTPS encryption for all API communications, Token-based API authentication, PCI-DSS compliance for payment processing, GDPR-compliant customer data handling, Secure storage of booking and personal details, Regular security audits and industry-standard practices."
+          },
+          {
+            question: "How fast is the hotel booking confirmation?",
+            answer: "Most hotel bookings are confirmed in real time (within a few seconds). Booking confirmation, voucher generation, and payment status are available instantly via API response and optional webhooks."
+          },
+          {
+            question: "Can customers cancel their hotel bookings using the API?",
+            answer: "Yes, the Hotel Booking API supports: Full or partial cancellation based on hotel-specific cancellation policies, Automated refund workflows where applicable, Real-time cancellation status and confirmation sent via API response."
+          },
+          {
+            question: "Do I get access to room images, ratings, and reviews?",
+            answer: "Yes, the API provides: High-resolution images of hotel rooms, Hotel star ratings, Customer reviews (where available). This helps improve customer decision-making during booking."
+          },
+        ]}
+      />
+
 
       <Certification />
       <Footer />

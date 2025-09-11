@@ -5,7 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
-import { 
+import FAQ from '@/components/FAQ' 
+import {
   CheckCircle,
   Send,
   Zap,
@@ -104,7 +105,7 @@ export default function AirBookingAPIPage() {
           message: `Air Booking API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -118,7 +119,7 @@ export default function AirBookingAPIPage() {
 
   const airApiFeatures = [
     "Lightning Fast Bookings",
-    "Error Free Process", 
+    "Error Free Process",
     "Reduced Costs",
     "Customer Satisfaction",
     "Real-time Updates",
@@ -144,7 +145,7 @@ export default function AirBookingAPIPage() {
     },
     {
       icon: <ShieldCheck className="h-8 w-8" />,
-      title: "50% less booking errors with real time information",  
+      title: "50% less booking errors with real time information",
       description: "Real-time data validation and automated processes minimize human errors and booking discrepancies.",
       stat: "50%",
       label: "Error Reduction"
@@ -186,7 +187,7 @@ export default function AirBookingAPIPage() {
     },
     {
       icon: <Languages className="h-8 w-8" />,
-      title: "Multi-Language Support", 
+      title: "Multi-Language Support",
       description: "Offer your customers the convenience of browsing and booking flights in their preferred language. Now worldwide can use your platform.",
       features: ["Multiple Languages", "Global Reach", "Localized Experience", "Worldwide Access"]
     },
@@ -212,7 +213,7 @@ export default function AirBookingAPIPage() {
     },
     {
       icon: <Settings className="h-8 w-8" />,
-      title: "Set Up Your Environment", 
+      title: "Set Up Your Environment",
       description: "Install software tools on your computer. The API documentation we provide will guide you through this setup process."
     },
     {
@@ -244,7 +245,7 @@ export default function AirBookingAPIPage() {
       description: "Ensure your applications remain operational with minimum disruptions"
     },
     {
-      icon: <Database className="h-6 w-6" />, 
+      icon: <Database className="h-6 w-6" />,
       title: "Over 20 API Endpoints",
       description: "Access multiple endpoints for flight search, booking management, itinerary retrieval and more"
     },
@@ -255,7 +256,7 @@ export default function AirBookingAPIPage() {
     },
     {
       icon: <Headphones className="h-6 w-6" />,
-      title: "24/7 Support", 
+      title: "24/7 Support",
       description: "Comprehensive support team ensures minimum downtime at your end"
     },
     {
@@ -295,10 +296,10 @@ export default function AirBookingAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/air-booking-api-hero.png" 
-            alt="Air Booking API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/air-booking-api-hero.png"
+            alt="Air Booking API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -417,7 +418,7 @@ export default function AirBookingAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our dedicated team of API experts can transform the way you handle bookings. Choose Scriza if you want the flight booking process to be fast, secure and efficient for your users. Our API is the perfect booking tool your business was lacking.
                 </p>
-                
+
                 <div className="space-y-8">
                   {gamchangerFeatures.map((feature, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -460,7 +461,7 @@ export default function AirBookingAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   API integration may seem technical but it is actually very easy and quick
                 </p>
-                
+
                 <div className="space-y-6">
                   {howToUseSteps.map((step, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -486,7 +487,7 @@ export default function AirBookingAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our API solutions are 5-star rated because we are zealous to meet your needs. Our affordable API is trusted by 1000+ clients because of its reliability and scalability.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {whyChooseFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -512,16 +513,16 @@ export default function AirBookingAPIPage() {
                   The travel industry is competitive and Scriza can help you stay ahead. Contact us today to request a free API demo and transform your booking capabilities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Request Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -533,14 +534,52 @@ export default function AirBookingAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is an Air Booking API?",
+            answer: "The Air Booking API allows businesses to integrate real-time flight search, fare comparison, seat availability, ticket booking, cancellations, and PNR management into their applications, websites, or software systems. It provides seamless access to a large inventory of flights from multiple airlines and global distribution systems (GDS)."
+          },
+          {
+            question: "Who should use the Air Booking API?",
+            answer: "Our Air Booking API is ideal for: Travel agencies and aggregators, Online Travel Agencies (OTAs), Corporate travel management companies, Travel booking websites and apps, Tour operators, Fintech platforms offering travel services."
+          },
+          {
+            question: "What services are provided by the Air Booking API?",
+            answer: "Real-time flight search by origin, destination, date, and passenger count, View available flights with fare details, airline info, and seat classes, Check real-time seat availability, Instant flight ticket booking and confirmation, PNR generation and status inquiry, Booking cancellation and refund processing, Flight ticket modification (date, passenger details, etc.), Access to fare rules and baggage allowance details, E-ticket (PDF) generation and download."
+          },
+          {
+            question: "How does the Air Booking API work?",
+            answer: "The customer enters flight search criteria: origin, destination, travel dates, and number of passengers. The API fetches available flights in real time from multiple airlines and GDS sources. The customer selects a flight and provides passenger details. The API confirms fare, seat availability, and creates a booking. The customer makes payment through an integrated payment gateway. On successful payment, a PNR and e-ticket are generated and returned instantly. Booking status, cancellation, and modification can be handled via API calls."
+          },
+          {
+            question: "Is the Air Booking API secure?",
+            answer: "Yes, our API provides high-level security: HTTPS encryption for all API communications, Token-based authentication, PCI-DSS compliance for payment processing, GDPR-compliant data handling, Regular security audits and protection against fraud."
+          },
+          {
+            question: "How fast is flight booking confirmation?",
+            answer: "Most flight bookings are confirmed instantly or within a few seconds. PNR generation and e-ticket issuance are available in real time through API response or webhook."
+          },
+          {
+            question: "Can customers cancel or modify their booked tickets using the API?",
+            answer: "Yes, the Air Booking API supports: Booking cancellations as per airline-specific policies, Automated refund processing (where applicable), Booking modifications (change of date, passenger details) via supported API endpoints, Real-time cancellation and modification confirmations."
+          },
+          {
+            question: "Do I get access to fare rules, baggage details, and seat maps?",
+            answer: "Yes, the API provides: Detailed fare rules (cancellation, rescheduling charges), Baggage allowance per airline and class, Seat maps where available, enabling customers to select seats during booking."
+          },
+        ]}
+      />
+
 
       <Certification />
       <Footer />

@@ -6,7 +6,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -105,7 +107,7 @@ export default function AadhaarValidationAPIPage() {
           message: `Aadhaar Validation API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -157,10 +159,10 @@ export default function AadhaarValidationAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/aadhaar-validation-api-hero.png" 
-            alt="Aadhaar Validation API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/aadhaar-validation-api-hero.png"
+            alt="Aadhaar Validation API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -171,7 +173,7 @@ export default function AadhaarValidationAPIPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
-              
+
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -228,7 +230,7 @@ export default function AadhaarValidationAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Try the 5-star rated API solution by Scriza. Below are the reasons we have become a preferred choice for onboarding API technologies
                 </p>
-                
+
                 <div className="space-y-6">
                   {reasons.map((reason, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -389,7 +391,7 @@ export default function AadhaarValidationAPIPage() {
                         <p className="text-gray-700 leading-relaxed">API key can be used to verify an Aadhaar card without OTP.</p>
                         <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                           <pre className="text-sm text-gray-700 whitespace-pre-wrap font-mono">
-{`status_id": 1,
+                            {`status_id": 1,
 "state": "Delhi",
 "ageBand": "30-40",
 "gender": "MALE",
@@ -424,16 +426,16 @@ export default function AadhaarValidationAPIPage() {
                   You have customers to onboard! Let's get started with a robust API for Aadhaar verification.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Request Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -445,14 +447,90 @@ export default function AadhaarValidationAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is the Aadhaar Verification API?",
+            answer: "Aadhaar Verification API allows businesses and organizations to verify the identity of individuals using their Aadhaar number and related demographic or biometric information. It provides secure, real-time authentication for KYC (Know Your Customer) and regulatory compliance purposes."
+          },
+          {
+            question: "Who should use the Aadhaar Verification API?",
+            answer: "The Aadhaar Verification API is ideal for: Banks and financial institutions for KYC and account verification, Fintech companies offering digital payments, wallets, or lending services, Telecom providers for SIM activation and verification, Government organizations and service providers, E-commerce and online platforms requiring identity verification, and Any business that needs secure and reliable Aadhaar-based verification."
+          },
+          {
+            question: "What types of Aadhaar verification are available?",
+            answer: "We provide multiple verification methods: Demographic Authentication (Demo KYC) – Verifies name, date of birth, and address against Aadhaar database; Biometric Authentication – Verifies fingerprint or iris against Aadhaar; eKYC (Electronic KYC) – Retrieves verified user details with consent; OTP-Based Verification – One-time password sent to the registered Aadhaar mobile number for validation."
+          },
+          {
+            question: "How does the Aadhaar Verification API work?",
+            answer: "The user provides Aadhaar number and necessary details (or biometric data). The API sends the request to UIDAI’s secure server for verification. UIDAI responds with verification status (success/failure) and, if applicable, demographic details. Businesses can use this response to approve or reject KYC, account creation, or service access."
+          },
+          {
+            question: "Is Aadhaar Verification API secure?",
+            answer: "Yes, security is a top priority: All requests are encrypted via HTTPS, Data is transmitted securely to UIDAI servers, Role-based access control for your internal systems, Compliance with UIDAI and Government of India regulations, and No storage of Aadhaar numbers unless legally permitted."
+          },
+          {
+            question: "How fast is the verification process?",
+            answer: "Verification is near-instant: OTP-Based Verification – a few seconds, Biometric Authentication – instant or within seconds (depending on device/network), and eKYC Retrieval – usually under 10 seconds."
+          },
+          {
+            question: "Can the API be integrated with web and mobile applications?",
+            answer: "Yes, the Aadhaar Verification API can be integrated with: Web applications (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for bulk verification or automated workflows."
+          },
+          {
+            question: "Do we need consent from the user to verify Aadhaar?",
+            answer: "Yes, user consent is mandatory for Aadhaar verification as per UIDAI guidelines. OTP, biometric, or eKYC verification can only be performed with explicit user approval."
+          }
+        ]}
+      />
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is the Voter ID Verification API?",
+            answer: "Voter ID Verification API allows businesses and organizations to authenticate an individual’s identity using their Voter ID (EPIC) number. It provides real-time verification to ensure authenticity and compliance for services like KYC, elections, and secure user onboarding."
+          },
+          {
+            question: "Who should use the Voter ID Verification API?",
+            answer: "The Voter ID Verification API is ideal for: Banks and financial institutions for KYC compliance, Government and public service organizations, Voting and election-related platforms, Fintech and digital payment companies, Online service providers needing identity verification, and Any business requiring secure Voter ID authentication."
+          },
+          {
+            question: "What details can be verified through the API?",
+            answer: "The API can verify: Voter ID (EPIC) number, Name of the voter, Date of birth, Gender, Address linked to the Voter ID, and Constituency and polling information (if available)."
+          },
+          {
+            question: "How does the Voter ID Verification API work?",
+            answer: "The user provides their Voter ID number and required personal details. The API sends a request to the voter database (or authorized source) for verification. The API then returns a verification response (success/failure) along with matched demographic information. Businesses can use this response to approve or reject KYC or identity-related processes."
+          },
+          {
+            question: "Is the Voter ID Verification API secure?",
+            answer: "Yes, security is ensured through: HTTPS and SSL encryption for all requests, Role-based access controls, Data transmission according to legal and regulatory standards, and No unauthorized storage of Voter ID data."
+          },
+          {
+            question: "Can the API be integrated with web and mobile applications?",
+            answer: "Yes, the API can be integrated with: Web applications (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for bulk verification and automated workflows."
+          },
+          {
+            question: "Do users need to provide consent for verification?",
+            answer: "Yes, user consent is mandatory for Voter ID verification. Businesses must obtain explicit permission from the user before performing verification."
+          },
+          {
+            question: "Can the API handle bulk verification?",
+            answer: "Yes, the API supports batch verification for large-scale KYC or registration processes. It provides real-time status updates for multiple records."
+          }
+        ]}
+      />
+
+
 
       <Certification />
       <Footer />

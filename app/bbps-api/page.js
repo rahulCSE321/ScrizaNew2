@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -253,6 +254,48 @@ export default function BBPSAPIPage() {
           <DemoBookingForm onSubmit={handleDemoSubmit} />
         </div>
       </section>
+
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is BBPS API?",
+            answer: "The BBPS API enables businesses to integrate Bharat Bill Payment System services into their applications, websites, or platforms. It allows customers to pay utility bills (electricity, water, gas, telecom, etc.) securely and instantly through a single standardized API interface, supported by multiple billers and banks."
+          },
+          {
+            question: "Who should use the BBPS API?",
+            answer: "Our BBPS API is designed for:Digital payment platformsFintech companiesE-commerce websitesWallet providersBanking appsUtility aggregatorsAny business aiming to offer bill payment services directly to customers"
+          },
+
+          {
+            question: "What services are supported by BBPS API?",
+            answer: "Electricity Bill PaymentWater Bill PaymentGas Bill PaymentLandline & Postpaid Mobile Bill PaymentBroadband & Cable TV Bill PaymentMunicipal Taxes (Property Tax)DTH RechargeOther government and private billers supported by BBPS"
+          },
+          {
+            question: "How does the BBPS API work?",
+            answer: "The customer selects the biller and enters consumer details (e.g., account number).The API sends the request to our system.The system processes the request and interacts with operator networks.Instant status (Success, Failure, Pending) is returned to the business in real time.Detailed reports are available for tracking and reconciliation."
+          },
+          {
+            question: "Is the BBPS API secure?",
+            answer: "Yes. Security features include:End-to-end encryption (HTTPS)Token-based authentication for API accessCompliance with PCI-DSS and RBI guidelinesRegular audit and fraud detection mechanismsSecure handling of consumer and payment data"
+          },
+          {
+            question: "How fast is the bill payment settlement?",
+            answer: "Most payments are processed in real-time.Confirmation is sent instantly via API response or webhook callback.Settlement to the biller happens as per BBPS-defined cycles (typically T+1 working day)."
+          },
+
+
+          {
+            question: "What happens if the bill payment fails?",
+            answer: "The API returns a specific error code with a detailed reason (e.g., invalid consumer number, network error, insufficient balance).No amount is debited in case of failed payments.You can prompt the customer to retry or correct input details.Failed transactions can be tracked and reconciled via reports."
+          },
+
+          {
+            question: "Do customers need to provide KYC for using BBPS payments?",
+            answer: "No separate KYC is needed from end customers as BBPS itself complies with government and RBI regulations.However, businesses integrating the BBPS API must complete KYC with us, submitting:Company Registration CertificatePAN CardBank Account DetailsAuthorized Signatory Documents"
+          },
+      ]}
+      />
 
       <Certification />
       <Footer />

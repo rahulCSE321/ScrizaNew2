@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -432,6 +433,32 @@ export default function CreditCardBillPaymentPage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Credit Card API?",
+            answer: "A Credit Card API allows businesses to seamlessly integrate credit card payment acceptance into their website, mobile app, or software platform. It enables secure, fast, and reliable processing of credit card transactions in real time, supporting a wide range of card types and schemes."
+          },
+          {
+            question: "Who can use the Credit Card API?",
+            answer: "Our Credit Card API is designed for:E-commerce businessesSubscription-based servicesDigital marketplacesTravel and ticketing platformsUtility bill payment servicesSaaS companiesAny business that needs to accept credit card payments from customers online"
+          },
+          {
+            question: "How does the Credit Card API work?",
+            answer: "The customer enters credit card details (card number, expiry date, CVV) during checkout.The API securely transmits the payment data to the payment gateway.The issuing bank validates and authorizes the transaction.The API returns a real-time success or failure response.Funds are transferred to the merchant account as per the settlement cycle."
+          },
+          {
+            question: "What credit card types are supported?",
+            answer: "Our Credit Card API supports all major card schemes, including:VisaMasterCardAmerican Express (Amex)RuPayDiners ClubIt supports both debit and credit cards issued by banks across India and internationally."
+          },
+          {
+            question: "Is the Credit Card API secure?",
+            answer: "Absolutely. We follow strict security standards:PCI-DSS compliant infrastructureEnd-to-end SSL encryptionTokenization of sensitive card data3D Secure (2FA) Authentication supportedSecure customer redirection for authorization when requiredThese measures ensure that your customers' financial information remains safe and secure throughout the payment process."
+          }
+        ]}
+      />
+            
 
       <Certification />
       <Footer />

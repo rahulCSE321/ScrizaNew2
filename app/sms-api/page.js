@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -492,6 +493,44 @@ export default function SMSAPIPage() {
           </div>
         </div>
       </section>
+
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is an SMS API?",
+            answer: "An SMS API (Application Programming Interface) allows businesses to send SMS messages programmatically through their applications, websites, or software platforms. It enables automated, real-time sending of transactional and promotional SMS directly to customers’ mobile numbers."
+          },
+          {
+            question: "Who should use the SMS API?",
+            answer: "Our SMS API is ideal for:E-commerce platformsBanking and financial servicesHealthcare providersEducational institutionsLogistics and delivery companiesMarketing and advertising agenciesAny business that requires automated SMS communication"
+          },
+          {
+            question: "What types of SMS can I send using the API?",
+            answer: "Transactional SMS: OTPs, payment confirmations, booking alerts, account updates, policy reminders.Promotional SMS: Offers, discounts, event announcements, marketing campaigns.Bulk SMS: Send SMS to a large number of recipients in a single API call."
+          },
+          
+            
+          {
+            question: "How does the SMS API work?",
+            answer: "The business integrates the API into their system using API Key and Authentication.A request is made with parameters such as mobile number, message content, sender ID, etc.The SMS API processes the request and delivers the message via telecom operator gateways.The system returns a response with a message ID and delivery status.Delivery reports and status are available via API or dashboard."
+          },
+          {
+            question: "Is the SMS API secure?",
+            answer: "Yes, our SMS API is designed with high security standards:HTTPS encryption for all API callsAPI Key authenticationIP Whitelisting (optional)This ensures secure communication between your system and our SMS platform."
+          }, 
+          {
+            question: "How fast are SMS messages delivered?",
+            answer: "Transactional SMS are delivered in real time, typically within seconds to a few minutes.Promotional SMS delivery depends on telecom operator policies and may be queued during peak hours.Delivery status is provided via API callbacks or can be queried through the API."
+          },
+          {
+            question: "What is the sender ID and how does it work?",  
+            answer: "Sender ID is a 6-character alphanumeric identifier that appears as the sender of the SMS.For Transactional SMS, pre-approved sender IDs are required by the telecom regulator (DoT/TRAI).For Promotional SMS, a generic sender ID is usually used.You can register your own custom Sender ID for branding purposes."
+          },
+           
+
+        ]}
+      />
 
       <Certification />
       <Footer />

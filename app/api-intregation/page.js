@@ -6,7 +6,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'  
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -107,7 +109,7 @@ export default function APIIntegrationServicesPage() {
           message: `API Integration Services Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -121,7 +123,7 @@ export default function APIIntegrationServicesPage() {
 
   const apiIntegrationFeatures = [
     "Easy Integration",
-    "Secure Authentication", 
+    "Secure Authentication",
     "Real-time Data Sync",
     "Scalable Solutions",
     "Multi-Platform Support",
@@ -147,7 +149,7 @@ export default function APIIntegrationServicesPage() {
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Advanced security measures",  
+      title: "Advanced security measures",
       description: "Multiple authentication methods including OAuth, JWT, and API keys for maximum security.",
       stat: "99.9%",
       label: "Security"
@@ -171,7 +173,7 @@ export default function APIIntegrationServicesPage() {
   const authenticationMethods = [
     "Basic Auth, Auth 1, Auth 2",
     "API keys",
-    "Basic HTTP", 
+    "Basic HTTP",
     "JSON Web Token",
     "SAML Token and more"
   ]
@@ -197,7 +199,7 @@ export default function APIIntegrationServicesPage() {
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Real-time Updates", 
+      title: "Real-time Updates",
       description: "Get instant data synchronization and improved productivity with real-time information flow across systems.",
       features: ["Instant Sync", "Live Updates", "Productivity Boost", "Real-time Flow"]
     },
@@ -217,7 +219,7 @@ export default function APIIntegrationServicesPage() {
     },
     {
       icon: <Settings className="h-8 w-8" />,
-      title: "API Architecture Design", 
+      title: "API Architecture Design",
       description: "Robust and scalable API architecture ensuring security, performance, and flexibility for your business requirements."
     },
     {
@@ -302,7 +304,7 @@ export default function APIIntegrationServicesPage() {
       description: "Tailored solutions designed specifically for your unique business requirements"
     },
     {
-      icon: <ShieldCheck className="h-6 w-6" />, 
+      icon: <ShieldCheck className="h-6 w-6" />,
       title: "Robust security",
       description: "Advanced security measures and authentication protocols for data protection"
     },
@@ -313,7 +315,7 @@ export default function APIIntegrationServicesPage() {
     },
     {
       icon: <DollarSign className="h-6 w-6" />,
-      title: "Competitive pricing", 
+      title: "Competitive pricing",
       description: "Cost-effective solutions providing maximum value for your investment"
     },
     {
@@ -331,7 +333,7 @@ export default function APIIntegrationServicesPage() {
     },
     {
       icon: <Banknote className="h-6 w-6" />,
-      title: "Financial Services", 
+      title: "Financial Services",
       description: "APIs for banks and fintech companies for payment processing and account management"
     },
     {
@@ -363,10 +365,10 @@ export default function APIIntegrationServicesPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/apiintegration.png" 
-            alt="API Integration Services" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/apiintegration.png"
+            alt="API Integration Services"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -383,7 +385,7 @@ export default function APIIntegrationServicesPage() {
                   API Integration Services
                 </h2>
                 <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recharge Software</h3>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Whether you're a business owner, a developer, or an IT professional, API integration can revolutionize the way you work. Scriza is well-equipped to navigate you through the challenges of complex integration processes and security concerns. We have decade long expertise in meeting your unique needs. Get in touch for custom API development and integration.
                 </p>
@@ -576,7 +578,7 @@ export default function APIIntegrationServicesPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our API integration services cater to a wide range of industries. With opensource integration tools, the following industries are getting the benefits of our low cost Android API integration services.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {industriesServed.map((industry, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -599,16 +601,16 @@ export default function APIIntegrationServicesPage() {
                   Take your business to new heights with our API services. With our expertise and advanced API technology, you would unlock limitless possibilities for growth. So let's get started.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Schedule Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -620,14 +622,53 @@ export default function APIIntegrationServicesPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is API Integration?",
+            answer: "API Integration is the process of connecting different software applications or platforms using Application Programming Interfaces (APIs) to enable seamless data exchange, automation, and interoperability between systems. It allows businesses to enhance functionality without building everything from scratch."
+          },
+          {
+            question: "Who should use API Integration services?",
+            answer: "API Integration services are ideal for: Businesses using multiple software systems that need to work together, E-commerce platforms integrating payment gateways, shipping, or inventory systems, Fintech companies connecting banking, payments, and wallet systems, Travel agencies integrating flight, hotel, and bus APIs, SaaS platforms requiring third-party service integrations, and Enterprises looking to automate workflows and reduce manual tasks."
+          },
+          {
+            question: "What types of APIs can you integrate?",
+            answer: "We provide integration for various types of APIs, including: Payment APIs (UPI, credit/debit cards, wallets), Banking & Fintech APIs, Travel APIs (Flights, Hotels, Buses, Cabs), Recharge & Utility APIs, SMS, Email, and Notification APIs, Social Media APIs (Facebook, Instagram, LinkedIn, Twitter), CRM, ERP, and Inventory Management APIs, and Custom third-party APIs for specialized solutions."
+          },
+          {
+            question: "How does API Integration work?",
+            answer: "We analyze your business requirements and the APIs to be integrated. Then, we design a workflow to connect your systems seamlessly. API endpoints are implemented for real-time data exchange, tested thoroughly for accuracy, speed, and reliability, and finally deployed live for smooth operation."
+          },
+          {
+            question: "Is API Integration secure?",
+            answer: "Yes, we ensure secure integration with: HTTPS and SSL/TLS encryption, API key/token-based authentication, Role-based access and permissions, Secure data storage and transmission, and Compliance with industry standards and regulations."
+          },
+          {
+            question: "Can API Integration automate business processes?",
+            answer: "Yes, API integration can automate tasks such as: Payment processing and settlements, Inventory and order updates, Booking and ticketing confirmations, Notifications and alerts (SMS, Email, Push), and Data synchronization between multiple platforms."
+          },
+          {
+            question: "How long does API Integration take?",
+            answer: "Timelines vary depending on complexity: Simple API Integration (e.g., payment or notification API): 1–2 weeks, Medium complexity (e.g., travel booking, fintech, or multi-API workflow): 2–4 weeks, and Enterprise-level integration with multiple APIs and custom workflows: 1–3 months."
+          },
+          {
+            question: "Do you provide custom API development?",
+            answer: "Yes, we can develop custom APIs for your business to: Expose your system data to third-party applications, Enable internal system communication, Support mobile and web applications, and Provide secure endpoints for partners or clients."
+          }
+        ]}
+      />
+
+
 
       <Certification />
       <Footer />

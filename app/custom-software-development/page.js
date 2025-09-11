@@ -7,7 +7,8 @@ import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
 import FAQ from '@/components/FAQ'
-import { 
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -81,7 +82,7 @@ export default function CustomSoftwareDevelopmentPage() {
           message: `Custom Software Development Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -95,7 +96,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
   const developmentServices = [
     "Web Application Development",
-    "Mobile App Development", 
+    "Mobile App Development",
     "Enterprise Software Solutions",
     "E-commerce Platforms",
     "API Development & Integration",
@@ -145,7 +146,7 @@ export default function CustomSoftwareDevelopmentPage() {
       description: "Understanding your requirements and creating detailed project roadmap"
     },
     {
-      step: "02", 
+      step: "02",
       title: "Design & Prototyping",
       description: "Creating user-friendly designs and interactive prototypes"
     },
@@ -164,7 +165,7 @@ export default function CustomSoftwareDevelopmentPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -177,7 +178,7 @@ export default function CustomSoftwareDevelopmentPage() {
               Transform Your Business with Tailored Software Solutions
             </p>
             <p className="text-lg mb-8 max-w-3xl mx-auto">
-              We create powerful, scalable custom software applications that perfectly align with your business 
+              We create powerful, scalable custom software applications that perfectly align with your business
               objectives. From web applications to mobile apps and enterprise solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -203,7 +204,7 @@ export default function CustomSoftwareDevelopmentPage() {
               Comprehensive software development solutions for every need
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {developmentServices.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
@@ -228,7 +229,7 @@ export default function CustomSoftwareDevelopmentPage() {
               Professional approach to custom software development
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
@@ -254,7 +255,7 @@ export default function CustomSoftwareDevelopmentPage() {
               Modern tech stack for robust and scalable solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
@@ -277,7 +278,7 @@ export default function CustomSoftwareDevelopmentPage() {
               Structured approach ensuring quality and timely delivery
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {developmentProcess.map((process, index) => (
               <div key={index} className="text-center">
@@ -305,13 +306,13 @@ export default function CustomSoftwareDevelopmentPage() {
               Ready to transform your business with custom software? Let's talk!
             </p>
           </div>
-          
+
           <DemoBookingForm onSubmit={handleDemoSubmit} />
         </div>
       </section>
 
       {/* FAQ Section */}
-      <FAQ 
+      <FAQ
         title="Custom Software Development FAQ"
         faqs={[
           {
@@ -336,6 +337,44 @@ export default function CustomSoftwareDevelopmentPage() {
           }
         ]}
       />
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Custom Software Development?",
+            answer: "Custom Software Development refers to the process of designing, developing, and deploying software applications tailored specifically to meet the unique requirements of a business or organization. Unlike off-the-shelf software, custom solutions are built to solve specific business challenges, optimize workflows, and integrate seamlessly into your operations."
+          },
+          {
+            question: "Who should opt for Custom Software Development?",
+            answer: "Custom Software Development is ideal for: Businesses with unique processes not addressed by standard software, Startups with innovative ideas, Enterprises needing system integrations, Companies requiring automation of manual tasks, Organizations aiming to improve internal productivity and customer experience, Any business looking for scalable and secure digital solutions."
+          },
+          {
+            question: "What types of custom software do you develop?",
+            answer: "We develop a wide range of custom solutions, including: Web applications (CRM, ERP, e-commerce platforms), Mobile applications (iOS, Android), Enterprise software solutions, SaaS (Software as a Service) products, APIs and system integrations, Business automation software, Data analytics and reporting tools, Cloud-based software solutions."
+          },
+          {
+            question: "How long does custom software development take?",
+            answer: "The timeline depends on the project’s complexity, scope, and features. Typically: Small projects: 4–8 weeks, Medium projects: 2–4 months, Large-scale solutions: 6–12+ months. We provide a detailed timeline after understanding your specific requirements."
+          },
+          {
+            question: "How do you ensure the software meets my business needs?",
+            answer: "Our process includes: Detailed requirement gathering and analysis, Collaborative discussions to finalize project scope, Prototyping and wireframing for early feedback, Agile development with iterative delivery, Regular client reviews during development, Comprehensive testing (unit, integration, performance, security), Final delivery with documentation and training."
+          },
+          {
+            question: "Will my software be scalable in the future?",
+            answer: "Yes, we build custom software with scalability in mind: Modular architecture, Cloud compatibility, Microservices (where applicable), Database optimization for growing data needs. This ensures your solution grows with your business."
+          },
+          {
+            question: "What technologies do you use for custom software development?",
+            answer: "We work with a wide range of technologies, including but not limited to: Backend: Node.js, Python, Java, .NET, PHP, Frontend: React, Angular, Vue.js, Mobile: Flutter, React Native, Swift, Kotlin, Database: MySQL, PostgreSQL, MongoDB, Firebase, Cloud: AWS, Google Cloud, Microsoft Azure."
+          },
+        ]}
+      />
+
+
+
+
+
 
       <Certification />
       <Footer />

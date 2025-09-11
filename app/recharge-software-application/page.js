@@ -397,15 +397,51 @@ export default function RechargeSoftwarePage() {
         </div>
       </section> */}
        
-       <FAQ 
-  title="Your Custom Title"
+       <FAQ
+  title="Frequently Asked Questions"
   faqs={[
     {
-      question: "Your question here?",
-      answer: "Your detailed answer here."
+      question: "What is Recharge Software?",
+      answer: "Recharge Software is a technology solution that enables businesses to offer mobile, DTH, data card, and utility bill recharges online. It automates recharge processes, payment handling, commission tracking, and reporting, providing a seamless experience for both operators and customers."
+    },
+    {
+      question: "Who should use Recharge Software?",
+      answer: "Our Recharge Software is ideal for: Mobile recharge distributors and resellers, DTH and utility bill payment operators, Fintech startups offering payment services, E-commerce platforms with integrated recharge solutions, Banks and digital payment platforms, and Any business wanting to offer prepaid, postpaid, or utility payment services."
+    },
+    {
+      question: "What types of Recharge Software do you develop?",
+      answer: "We develop a variety of recharge and payment solutions, including: Mobile Recharge Software (Prepaid & Postpaid), DTH Recharge Software, Data Card Recharge Software, Utility Bill Payment Platforms (Electricity, Water, Gas, Broadband), Multi-Operator Recharge Portals, Wallet & Payment Gateway Integration, Admin Panel for commission and transaction management, and API integration for third-party services."
+    },
+    {
+      question: "How does Recharge Software work?",
+      answer: "Users select the service type (mobile, DTH, utility) and enter details (number, operator, amount). The software verifies account information in real-time, processes payment via integrated gateways, and instantly completes the recharge. A confirmation message or receipt is generated, while the admin panel tracks commissions, transactions, refunds, and settlements."
+    },
+    {
+      question: "Is the software secure and reliable?",
+      answer: "Yes, we ensure: End-to-end encryption of data and transactions, Secure payment gateway integration (PCI DSS compliant), Fraud detection and prevention mechanisms, Role-based access control for admins and agents, and Regular security audits and performance optimization."
+    },
+    {
+      question: "Can it support multiple operators and service providers?",
+      answer: "Yes, our software supports: Multiple mobile operators (Airtel, Jio, Vi, BSNL, etc.), Multiple DTH providers (Tata Sky, Dish TV, Airtel DTH, etc.), Multiple utility providers for electricity, gas, water, broadband, and more, and API integration with service providers for real-time recharge processing."
+    },
+    {
+      question: "How long does it take to develop Recharge Software?",
+      answer: "Timelines vary depending on features: Basic Recharge Portal: 2–4 weeks, Multi-Operator Recharge Platform with Wallet & Admin Panel: 1–3 months, Enterprise-Grade Recharge & Payment Solution: 3–6 months. Exact timelines depend on integrations and customization requirements."
+    },
+    {
+      question: "Can it handle high-volume transactions?",
+      answer: "Yes, the software is designed for scalability with: Cloud-ready infrastructure for high availability, Load balancing for large numbers of concurrent transactions, Real-time transaction tracking and reporting, and Optimized database for speed and reliability."
+    },
+    {
+      question: "Do you provide API for integration?",
+      answer: "Yes, we provide: Recharge API for mobile, DTH, and utility payments, Wallet API for user accounts and fund management, Payment gateway API integration, and Admin API for reporting and transaction management. This allows seamless integration with your website, app, or third-party platforms."
     }
   ]}
 />
+
+
+
+
       <Certification />
       <Footer />
       <ChatWidget />

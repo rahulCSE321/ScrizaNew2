@@ -5,8 +5,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
-import Certification from '@/components/Certification'  
-import { 
+import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ' 
+import {
   CheckCircle,
   Send,
   Zap,
@@ -102,7 +103,7 @@ export default function DigitalMarketingPage() {
           message: `Digital Marketing Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -116,7 +117,7 @@ export default function DigitalMarketingPage() {
 
   const marketingFeatures = [
     "SEO Optimization",
-    "Social Media Marketing", 
+    "Social Media Marketing",
     "Content Creation",
     "PPC Advertising",
     "Analytics & Reporting",
@@ -278,10 +279,10 @@ export default function DigitalMarketingPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/digital-marketing-hero.png" 
-            alt="Digital Marketing Services" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/digital-marketing-hero.png"
+            alt="Digital Marketing Services"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -338,7 +339,7 @@ export default function DigitalMarketingPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   When online platforms like websites and social media are used to promote products or services, it is called digital marketing.
                 </p>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   With thoughtful digital marketing strategies, you can:
                 </p>
@@ -367,7 +368,7 @@ export default function DigitalMarketingPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   In a crowded market of digital marketing agencies, Scriza stands out as the best choice. Choose us for unparalleled digital marketing expertise. We are committed to driving your business's success due to the following reasons:
                 </p>
-                
+
                 <div className="space-y-6">
                   {companyAdvantages.map((advantage, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -399,7 +400,7 @@ export default function DigitalMarketingPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   SEO (Search Engine Optimization) improves your website's visibility online so that more and more potential users can find your business. Scriza can make a world of difference in enhancing your online presence.
                 </p>
-                
+
                 <div className="space-y-8">
                   {seoServices.map((service, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -451,7 +452,7 @@ export default function DigitalMarketingPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Below are the features that make our social media marketing services a game-changer for all sizes of businesses:
                 </p>
-                
+
                 <div className="space-y-8">
                   {socialMediaFeatures.map((feature, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -491,7 +492,7 @@ export default function DigitalMarketingPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Improve your online presence: Discover the Best SEO Service Company Near Me
                 </h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Digital Marketing Solutions</h3>
@@ -547,16 +548,16 @@ export default function DigitalMarketingPage() {
                   Creative digital marketing solutions can increase conversion rates by 80%! Don't you want to achieve such results? Take the step towards success today and contact us now for a free consultation!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Free Consultation
                     <Calendar className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -568,18 +569,60 @@ export default function DigitalMarketingPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book a Free Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Digital Marketing Service?",
+            answer: "Digital Marketing Service refers to promoting your business, products, or services online using various digital channels such as search engines, social media, email, content marketing, paid ads, and more. It helps businesses build brand awareness, generate leads, drive sales, and engage customers in the digital space."
+          },
+          {
+            question: "Who should use Digital Marketing Services?",
+            answer: "Digital Marketing Services are ideal for: Startups and small businesses aiming for online visibility, E-commerce brands seeking to boost sales, Corporate businesses wanting to improve lead generation, Local businesses aiming to attract nearby customers, Educational institutes promoting courses online, Healthcare providers, real estate firms, and more."
+          },
+          {
+            question: "What types of Digital Marketing services do you provide?",
+            answer: "We offer a full range of digital marketing services, including: Search Engine Optimization (SEO), Pay-Per-Click (PPC) Advertising, Social Media Marketing (SMM), Content Marketing, Email Marketing, Influencer Marketing, Affiliate Marketing, Online Reputation Management (ORM), and Analytics & Reporting."
+          },
+          {
+            question: "How do you measure the success of digital marketing campaigns?",
+            answer: "We track key performance indicators (KPIs), including: Website traffic and user engagement, Keyword rankings and organic search growth, Click-through rates (CTR) and cost per click (CPC), Conversion rates (leads, sales, form submissions), Social media reach, engagement, and follower growth, Email open rates and CTR, ROI from ad spend. Monthly detailed reports are provided."
+          },
+          {
+            question: "Do you offer customized digital marketing strategies?",
+            answer: "Yes, we create fully customized strategies based on: Your industry, Business goals (brand awareness, lead generation, sales), Target audience, and Budget. We perform competitor analysis, keyword research, audience profiling, and market research before crafting the strategy."
+          },
+          {
+            question: "What is SEO and why is it important?",
+            answer: "SEO (Search Engine Optimization) improves your website’s visibility on search engines like Google. It helps drive organic traffic by optimizing: Website content, Site speed, Mobile responsiveness, Meta tags, and Backlinks. A strong SEO strategy boosts rankings, authority, and leads."
+          },
+          {
+            question: "How long does it take to see results in Digital Marketing?",
+            answer: "SEO: 3–6 months (long-term growth), PPC Ads: Immediate results depending on campaign setup, Social Media Campaigns: 1–3 months for consistent growth, Content Marketing: 2–4 months for traffic and engagement growth. Ongoing optimization ensures continuous improvement."
+          },
+          {
+            question: "Do you handle paid advertising campaigns?",
+            answer: "Yes, we manage paid advertising campaigns on: Google Ads (Search, Display, Shopping), Facebook Ads, Instagram Ads, LinkedIn Ads, and YouTube Ads. We handle ad strategy, targeting, ad design, A/B testing, bidding optimization, and monthly reporting."
+          },
+          {
+            question: "What industries do you specialize in for digital marketing?",
+            answer: "We serve industries such as: E-commerce, Healthcare, Real Estate, Education, Hospitality, Finance & Insurance, IT & SaaS, and Manufacturing."
+          }
+        ]}
+      />
+
 
       <Certification />
       <Footer />
-      <ChatWidget />     
+      <ChatWidget />
     </div>
   )
 }

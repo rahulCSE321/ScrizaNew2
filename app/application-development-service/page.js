@@ -5,7 +5,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
-import { 
+import FAQ from '@/components/FAQ' 
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -101,7 +103,7 @@ export default function ApplicationDevelopmentPage() {
           message: `Application Development Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -115,7 +117,7 @@ export default function ApplicationDevelopmentPage() {
 
   const appFeatures = [
     "Native Development",
-    "Cross-Platform", 
+    "Cross-Platform",
     "High Performance",
     "Secure Solutions",
     "User-Friendly UI",
@@ -294,10 +296,10 @@ export default function ApplicationDevelopmentPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/application-development-hero.png" 
-            alt="Application Development Services" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/application-development-hero.png"
+            alt="Application Development Services"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -365,7 +367,7 @@ export default function ApplicationDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We take immense pride in creating tailored digital experiences. Our app development solutions go above and beyond coding and design to empower all sizes of businesses.
                 </p>
-                
+
                 <div className="space-y-6">
                   {companyAdvantages.map((advantage, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -397,7 +399,7 @@ export default function ApplicationDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   So far, we have developed over 500 apps and created customized mobile solutions for various industries. We drive success and transformation through the following innovative solutions.
                 </p>
-                
+
                 <div className="space-y-8">
                   {industries.map((industry, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -440,7 +442,7 @@ export default function ApplicationDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our mobile application services encompass an extensive array of options, including the following:
                 </p>
-                
+
                 <div className="space-y-8">
                   {appServices.map((service, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -489,7 +491,7 @@ export default function ApplicationDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We are backed with the required tools and skills to develop mobile apps that are technically robust and visually stunning. Since its establishment, Scriza is renowned for offering result-oriented solutions. Here is the USP of our offered application development services.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   {technologies.map((tech, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -536,7 +538,7 @@ export default function ApplicationDevelopmentPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Discuss Ideas</h3>
                     <p className="text-gray-600 text-sm">Share your vision and requirements with our expert team.</p>
                   </div>
-                  
+
                   <div className="text-center p-6 border border-gray-200 rounded-xl">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#38857a] to-[#FF914C] text-white flex items-center justify-center mx-auto mb-4">
                       <Target className="h-8 w-8" />
@@ -544,7 +546,7 @@ export default function ApplicationDevelopmentPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Define Goals</h3>
                     <p className="text-gray-600 text-sm">Work together to establish clear objectives and success metrics.</p>
                   </div>
-                  
+
                   <div className="text-center p-6 border border-gray-200 rounded-xl">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#38857a] to-[#FF914C] text-white flex items-center justify-center mx-auto mb-4">
                       <Smartphone className="h-8 w-8" />
@@ -565,16 +567,16 @@ export default function ApplicationDevelopmentPage() {
                   Get in touch now.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Enquire Now
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -586,14 +588,56 @@ export default function ApplicationDevelopmentPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book a Free Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Application Development?",
+            answer: "Application Development is the process of designing, creating, deploying, and maintaining software applications tailored to specific business needs. These applications can be web-based, mobile (iOS, Android), or desktop-based, designed to solve business challenges, automate workflows, improve customer engagement, or provide new digital services."
+          },
+          {
+            question: "Who should use Application Development Services?",
+            answer: "Our Application Development Services are ideal for: Startups launching innovative digital products, Small & medium businesses needing automation solutions, Enterprises requiring custom business applications, Healthcare providers building patient management apps, Educational institutions developing e-learning apps, Financial firms automating operations, Any organization looking for scalable, secure, and purpose-built applications."
+          },
+          {
+            question: "What types of applications do you develop?",
+            answer: "We develop a wide range of applications, including: Web Applications (CRMs, ERPs, SaaS Platforms), Mobile Applications (iOS, Android, Cross-Platform), Desktop Applications (Windows, MacOS, Linux), Cloud-based Applications, Industry-Specific Custom Applications (Healthcare, Finance, Education, Retail), APIs and Microservices, E-commerce Applications, Business Automation Tools."
+          },
+          {
+            question: "What is the typical application development process?",
+            answer: "Requirement Gathering: Understanding your business goals, UI/UX Design: Wireframes, mockups, and design prototypes, Application Development: Agile approach with iterative releases, Quality Assurance: Rigorous testing (functional, performance, security), Deployment: Launch in production environment, Post-Launch Support: Maintenance, upgrades, and technical assistance."
+          },
+          {
+            question: "Will my application be scalable and secure?",
+            answer: "Yes, we build applications with: Scalable architecture (Microservices, Cloud-ready), Performance optimization, Data encryption (SSL, AES), Role-based user access control, Compliance with industry security standards (GDPR, HIPAA, PCI-DSS, etc.)."
+          },
+          {
+            question: "How long does application development take?",
+            answer: "Simple Applications (Landing page apps, calculators): 4–8 weeks, Medium Applications (CRMs, dashboards): 3–6 months, Large Applications (Marketplaces, Enterprise systems): 6–12+ months. Timelines are finalized after understanding your specific requirements."
+          },
+          {
+            question: "Can I manage and update the application myself after delivery?",
+            answer: "Yes, we offer: User-friendly Admin Panels or CMS, Full technical documentation, Admin training to help you manage content, users, and application settings. We can also provide ongoing maintenance as a service."
+          },
+          {
+            question: "What technologies do you use for application development?",
+            answer: "We use modern technologies such as: Frontend: React, Angular, Vue.js, Backend: Node.js, Python, Java, .NET, PHP, Mobile: Flutter, React Native, Swift, Kotlin, Database: MySQL, PostgreSQL, MongoDB, Firebase, Cloud: AWS, Microsoft Azure, Google Cloud."
+          },
+          {
+            question: "How much does application development cost?",
+            answer: "Cost depends on: Application complexity, Number of platforms (Web, iOS, Android), Integrations and third-party services, Time required for development. We provide a transparent quote after requirement analysis."
+          },
+        ]}
+      />
+
 
       <Certification />
       <Footer />

@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ' 
+import {
   CheckCircle,
   Send,
   Zap,
@@ -97,7 +98,7 @@ export default function WebsiteDesignPage() {
           message: `Website Design Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -111,7 +112,7 @@ export default function WebsiteDesignPage() {
 
   const designFeatures = [
     "Latest Design Trends",
-    "Responsive Layouts", 
+    "Responsive Layouts",
     "User-Friendly Interfaces",
     "SEO Optimized",
     "Fast Loading Speed",
@@ -267,10 +268,10 @@ export default function WebsiteDesignPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/website-design-hero.png" 
-            alt="Website Design Services" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/website-design-hero.png"
+            alt="Website Design Services"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -330,7 +331,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Connect with Scriza for transparent pricing and affordable cost of web design.
                 </p>
-                
+
                 <div className="space-y-6">
                   {pricingFeatures.map((feature, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -395,7 +396,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We offer comprehensive website design services tailored to meet your business needs and drive growth.
                 </p>
-                
+
                 <div className="space-y-8">
                   {designServices.map((service, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -444,7 +445,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We have decade long expertise in bringing the vision to life. Our team is proficient in working with various platforms, such as:
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {designPlatforms.map((platform, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -474,7 +475,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We have the experience and knowledge to cater to a diverse range of industries. From small startups and local businesses to established enterprises, we have helped thousands of entities in designing their vision.
                 </p>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Our team is equipped to understand the industry-specific requirements for businesses from the following sectors:
                 </p>
@@ -503,7 +504,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We take pride in our 5/5 star ratings and thousands of positive reviews. Our pursuit of excellence sets us apart from the competition. Apart from this, the following are the reasons behind the immense popularity of our web design services.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div className="border border-gray-200 rounded-lg p-6">
@@ -561,16 +562,16 @@ export default function WebsiteDesignPage() {
                   Let's get started!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Get Free Quote
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -582,17 +583,51 @@ export default function WebsiteDesignPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book a Free Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Web Designing Service?",
+            answer: "Web Designing Service involves creating visually appealing, user-friendly, and responsive websites tailored to your business needs. It covers everything from designing the layout, selecting color schemes, typography, user interface (UI), user experience (UX) design, to ensuring mobile compatibility and easy navigation."
+          },
+          {
+            question: "Who should use Web Designing Services?",
+            answer: "Our Web Designing Services are ideal for: Startups and small businesses looking to establish an online presence, E-commerce stores, Corporate businesses, Educational institutions, Nonprofits and government organizations, Service providers (lawyers, consultants, healthcare professionals), Anyone needing a professional, functional, and responsive website."
+          },
+          {
+            question: "What types of websites do you design?",
+            answer: "We design a wide variety of websites, including: Business/Corporate Websites, E-commerce Websites, Portfolio Websites, Personal/Blog Websites, Educational/Online Course Platforms, Nonprofit/Charity Websites, Event/Conference Websites, Landing Pages."
+          },
+          {
+            question: "What is included in your Web Designing Service?",
+            answer: "Our Web Designing Service includes: Requirement analysis and design consultation, Custom website layout and design (no templates, unless requested), Responsive design for all devices (mobile, tablet, desktop), User-friendly navigation structure, Integration of images, videos, and interactive elements, Contact forms, inquiry forms, newsletter subscription, Basic SEO-friendly structure, Social media integration, Performance optimization (speed, lightweight design)."
+          },
+          {
+            question: "Do you provide website content as part of the design service?",
+            answer: "We offer content creation services as an additional service: Professional copywriting for business, product descriptions, blog posts, etc. You can also provide your own content during the design process."
+          },
+          {
+            question: "Will my website be mobile-friendly?",
+            answer: "Yes, every website we design is fully responsive and optimized for mobile devices, tablets, and desktops to provide a seamless user experience across all screen sizes."
+          },
+          {
+            question: "Can I update my website myself after design?",
+            answer: "Yes, we offer: User-friendly Content Management Systems (CMS) like WordPress, Wix, or custom CMS solutions, Training or documentation to help you manage content, images, and updates easily. We can also provide ongoing website maintenance and support as needed."
+          },
+        ]}
+      />
+
 
       <Certification />
-      <Footer />    
+      <Footer />
       <ChatWidget />
     </div>
   )

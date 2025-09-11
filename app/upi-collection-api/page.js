@@ -450,6 +450,39 @@ export default function UPICollectionPage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is UPI Collection API?",
+            answer: "The UPI Collection API allows businesses to seamlessly integrate Unified Payments Interface (UPI) payment collection into their applications, websites, or software systems. It enables automated, real-time collection of payments from customers directly into the business bank account using UPI IDs or QR codes."
+          },
+          {
+            question: "Who should use the UPI Collection API?",
+            answer: "Our UPI Collection API is ideal for:E-commerce businessesDigital walletsSubscription servicesUtility bill payment platformsLending companiesPayment aggregatorsAny business that needs automated UPI payment collection"
+          },
+          {
+            question: "What is UPI Collection API?",
+            answer: "The UPI Collection API allows businesses to seamlessly integrate Unified Payments Interface (UPI) payment collection into their applications, websites, or software systems. It enables automated, real-time collection of payments from customers directly into the business bank account using UPI IDs or QR codes."
+          },
+          {
+            question: "Who should use the UPI Collection API?",
+            answer: "Our UPI Collection API is ideal for:E-commerce businessesDigital walletsSubscription servicesUtility bill payment platformsLending companiesPayment aggregatorsAny business that needs automated UPI payment collection"
+          },
+          {
+            question: "How does the UPI Collection API work?",
+            answer: "The business integrates the API into their system.When a customer initiates payment, the API generates a UPI payment request.The customer approves the payment via their UPI app (Google Pay, PhonePe, Paytm, etc.).The API receives a real-time callback or webhook confirming payment success or failure.Payment status and details are logged automatically for reconciliation."
+          },
+          {
+            question: "What are the advantages of using the UPI Collection API?",
+            answer: "Instant and real-time payment confirmationZero manual intervention requiredSecure and reliableEasy integration with minimal codingSupports bulk and individual payment requestsAutomatic reconciliation reportsScalable for high transaction volumes"
+          },
+          {
+            question: "Is the UPI Collection API secure?",
+            answer: "Yes. Our API follows industry-standard security protocols:HTTPS encryption for all data exchangesOTP-based customer authentication by NPCICompliance with RBI guidelinesPCI-DSS compliant infrastructureStrong authentication and fraud prevention measures"
+          }
+        ]}
+      />
 
       <Certification />
       <Footer />

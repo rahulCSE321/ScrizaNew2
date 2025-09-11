@@ -6,6 +6,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
+
 import { 
   CheckCircle,
   Send,
@@ -391,6 +393,52 @@ export default function VehicleRCVerificationAPIPage() {
           </div>
         </div>
       </section>
+      <FAQ
+  title="Frequently Asked Questions"
+  faqs={[
+    {
+      question: "What is the Vehicle RC Verification API?",
+      answer: "Vehicle RC Verification API allows businesses and organizations to verify the authenticity of a vehicle’s Registration Certificate (RC) in real-time. It helps confirm vehicle details, ownership, and registration status to prevent fraud and ensure compliance with legal requirements."
+    },
+    {
+      question: "Who should use the Vehicle RC Verification API?",
+      answer: "The API is ideal for: Banks and financial institutions for loan and insurance verification, Vehicle insurance companies, Car rental and cab services, Used car dealers and marketplaces, Government and transport authorities, and Fleet management companies."
+    },
+    {
+      question: "What details can be verified through the API?",
+      answer: "The API can verify: Vehicle Registration Number, Vehicle Owner Name, Vehicle Type and Category, Engine Number and Chassis Number, Registration Date and Expiry, RTO (Regional Transport Office) information, and Vehicle make, model, and color."
+    },
+    {
+      question: "How does the Vehicle RC Verification API work?",
+      answer: "The user provides the vehicle registration number and, if needed, additional vehicle details. The API sends a request to the authorized vehicle registration database. A response is returned indicating verification status (valid/invalid) along with vehicle information. Businesses can use this response to approve loans, insurance, sales, or rentals."
+    },
+    {
+      question: "Is the Vehicle RC Verification API secure?",
+      answer: "Yes, security is ensured through: HTTPS encryption for all API requests, Role-based access control for internal systems, Compliance with government and data privacy regulations, and No unauthorized storage of sensitive vehicle or owner data."
+    },
+    {
+      question: "Can the API be integrated with web and mobile applications?",
+      answer: "Yes, it can be integrated with: Web platforms (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for automated vehicle verification workflows."
+    },
+    {
+      question: "Do users need to provide consent for verification?",
+      answer: "Yes, owner consent is recommended before verification, especially when accessing sensitive vehicle or owner data, ensuring compliance with privacy laws."
+    },
+    {
+      question: "Can the API handle bulk verification?",
+      answer: "Yes, the API supports bulk verification for large-scale operations such as fleet management, used car marketplaces, or insurance companies. Batch processing reports are provided in real-time."
+    },
+    {
+      question: "How fast is the verification process?",
+      answer: "Individual vehicle verification is typically completed within seconds. Bulk verification processing time depends on the number of records but remains efficient and reliable."
+    },
+    {
+      question: "Are there regulatory compliances to follow?",
+      answer: "Yes, using the API requires compliance with: Government transport authority regulations, Data privacy laws for vehicle and owner information, and Legal requirements for loan, insurance, or sale verification."
+    }
+  ]}
+/>
+
 
       <Certification />
       <Footer />

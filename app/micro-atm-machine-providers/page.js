@@ -347,17 +347,23 @@ export default function MicroAtmMachineProvidersPage() {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "Why choose our AePS software solution?",
-            answer: "We have become a preferred choice for AePS API because it enables secure financial transactions using an Aadhaar card and biometric authentication. With game-changing technology, we can serve rural populations. The AePS enables users to conveniently withdraw cash without an account number, making it a safe and accessible payment solution."
+            question: "What is a Micro ATM?",
+            answer: "A Micro ATM is a compact device that enables banking services at remote or rural locations. It allows banking agents to perform basic banking transactions such as cash withdrawal, balance inquiry, mini statements, and fund transfers using biometric authentication or Aadhaar-based verification."
           },
           {
-            question: "What makes our MoPos Software India’s #1 payment method?",
-            answer: "Our MoPos software boasts a user-friendly interface. It supports multiple payment methods, real-time transaction processing, inventory management, sales reporting, customer engagement, and reliable customer support. Hence, it is a comprehensive solution for easy mobile point-of-sale operations."
+            question: "Who can use Micro ATM services?",
+            answer: "Micro ATM services are primarily aimed at: Rural and semi-urban customers without easy access to bank branches or ATMs. Small business owners and customers needing convenient cash withdrawals or deposits. Government schemes and welfare program beneficiaries requiring cash disbursement."
           },
           {
-            question: "What are the business benefits of our mATM software development services?",
-            answer: "Our mATM software development services are renowned for increased customer convenience. You can easily expand your financial service offerings and improve operational efficiency. With features like enhanced security measures and seamless integration our offered software solution becomes the most beneficial for all sizes of businesses."
+            question: "How does a Micro ATM work?",
+            answer: "The Micro ATM connects with the bank's core system via mobile networks. The customer authenticates their identity using Aadhaar or a debit card. The agent enters the transaction details and processes it, allowing instant cash withdrawal or deposit directly from the customer’s bank account."
           },
+          {
+            question: "What are the main services provided by Micro ATM?",
+            answer: "Cash Withdrawal Balance Inquiry Mini Statement Aadhaar-Enabled Payment System (AEPS) Fund Transfer (within bank or interbank) Direct Benefit Transfer (DBT)"
+          }
+
+
         ]}
       />
 

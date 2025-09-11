@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   CheckCircle,
   Send,
@@ -421,6 +422,44 @@ export default function RechargeAPIPage() {
           </div>
         </div>
       </section>
+
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Recharge API?",
+            answer: "A Recharge API enables businesses to integrate seamless recharge and bill payment services into their applications, websites, or software platforms. It allows instant recharges for mobile prepaid, DTH, data cards, postpaid bills, utility payments, and more."
+          },
+          {
+            question: "Who should use the Recharge API?",
+            answer: "Our Recharge API is perfect for:Mobile apps and websites offering recharge servicesDigital wallet providersUtility bill payment platformsE-commerce companiesFintech companiesTravel and ticket booking platformsAny business that wants to provide recharge & bill payment options to customers"
+          },
+          {
+            question: "What types of recharges and bill payments are supported?",
+            answer: "We support all major recharge types including:Prepaid Mobile Recharge (All major telecom operators)Postpaid Bill PaymentsDTH Recharge (Major providers like Tata Sky, Dish TV, Airtel Digital, etc.)Data Card RechargeElectricity Bill PaymentGas Bill PaymentWater Bill PaymentLandline Bill Payment"
+          },
+          {
+            question: "What happens if a recharge or bill payment fails?",
+            answer: "In case of failure (due to incorrect details, network issues, insufficient balance, or service provider downtime), the API returns a specific error code and message.Failed transactions are automatically retried or flagged for manual intervention.Refunds are processed as per the service provider’s settlement policy."
+          },
+          {
+            question: "How does the Recharge API work?",
+            answer: "The business integrates the API into their system.When a customer requests a recharge or bill payment, the API sends the request to our system.The system processes the request and interacts with operator networks.Instant status (Success, Failure, Pending) is returned to the business in real time.Detailed reports are available for tracking and reconciliation."
+          },
+          {
+            question: "Is the Recharge API secure?",
+            answer: "Yes, security is our priority:End-to-end HTTPS encryptionToken-based authentication for API accessCompliance with RBI and other regulatory guidelinesStrict fraud detection and prevention systemsNo sensitive customer data is stored"
+          },
+          {
+            question: "How fast is the recharge processing?",
+            answer: "Most recharges (Mobile, DTH, Data Card) are processed instantly (within seconds).Utility bill payments may take a few minutes to a few hours depending on the service provider.Real-time transaction status is available via API response and webhook callbacks."
+          }
+        ]}
+      />
+
+
+
+
 
       <Certification />
       <Footer />

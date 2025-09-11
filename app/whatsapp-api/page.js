@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'
+import {
   CheckCircle,
   Send,
   Zap,
@@ -22,7 +23,7 @@ import {
   Heart,
   ShoppingCart,
   Truck,
-  Building2,    
+  Building2,
   Stethoscope,
   Home,
   Plane,
@@ -97,7 +98,7 @@ export default function WhatsAppAPIPage() {
           message: `WhatsApp API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -111,7 +112,7 @@ export default function WhatsAppAPIPage() {
 
   const whatsappFeatures = [
     "Automated Responses",
-    "Personalized Notifications", 
+    "Personalized Notifications",
     "Real-time Communication",
     "Global Outreach",
     "Message Templates",
@@ -258,10 +259,10 @@ export default function WhatsAppAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/whatsapp-api-hero.png" 
-            alt="WhatsApp API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/whatsapp-api-hero.png"
+            alt="WhatsApp API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -356,7 +357,7 @@ export default function WhatsAppAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Explore our pricing options and start connecting with your customers on WhatsApp today!
                 </p>
-                
+
                 <div className="space-y-6">
                   {pricingCategories.map((category, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -397,7 +398,7 @@ export default function WhatsAppAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We have 10+ years of expertise in providing API technology. With our solutions businesses to deliver exceptional customer service, and improve operational efficiency. Take a look at the snippet of API features that build stronger brands.
                 </p>
-                
+
                 <div className="space-y-8">
                   {apiFeatures.map((feature, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -440,7 +441,7 @@ export default function WhatsAppAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   API technology can effectively enhance business operations due to its capabilities for smooth customer communication. With Scriza you need to meet only the key requirements and you are good to go.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {apiRequirements.map((requirement, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
@@ -464,7 +465,7 @@ export default function WhatsAppAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Over 100 clients trust us to enhance customer engagement through WhatsApp messaging
                 </p>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Scriza API solutions are designed to fit your preferences. We can help you set up your business account through which you customize your profile. Our experts can also offer assistance with API integration. The plugin solution is very easy to integrate with your existing system. Later you need training for your team so that everyone onboard can effectively use the API.
                 </p>
@@ -481,7 +482,7 @@ export default function WhatsAppAPIPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Setup & Profile</h3>
                     <p className="text-gray-600 text-sm">Business account setup and profile customization with expert assistance.</p>
                   </div>
-                  
+
                   <div className="text-center p-6 border border-gray-200 rounded-xl">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#38857a] to-[#FF914C] text-white flex items-center justify-center mx-auto mb-4">
                       <Code className="h-8 w-8" />
@@ -489,7 +490,7 @@ export default function WhatsAppAPIPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">API Integration</h3>
                     <p className="text-gray-600 text-sm">Easy plugin integration with your existing systems and comprehensive training.</p>
                   </div>
-                  
+
                   <div className="text-center p-6 border border-gray-200 rounded-xl">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#38857a] to-[#FF914C] text-white flex items-center justify-center mx-auto mb-4">
                       <BarChart2 className="h-8 w-8" />
@@ -510,16 +511,16 @@ export default function WhatsAppAPIPage() {
                   Choose Scriza you reliable WhatsApp Business API solution provider to boost profitability. With our future ready API solution you can transform your customer interactions. Contact us now to get started!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Schedule Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -531,17 +532,51 @@ export default function WhatsAppAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is WhatsApp Business API?",
+            answer: "The WhatsApp Business API enables businesses to communicate with their customers at scale using WhatsApp. It allows automated, secure, and reliable messaging for customer support, notifications, transactional messages, and marketing communication directly within the WhatsApp platform."
+          },
+          {
+            question: "Who should use the WhatsApp Business API?",
+            answer: "Our WhatsApp API is ideal for:E-commerce platformsBanks and financial servicesTravel and ticket booking companiesHealthcare providersUtility companiesCustomer support platformsAny business that needs to engage customers via WhatsApp at scale"
+          },
+          {
+
+            question: "What types of messages can I send using the WhatsApp API?",
+            answer: "Transactional Messages: Order confirmations, booking details, payment reminders, OTPs, delivery updates, policy updates.Customer Support Messages: Chat interactions, issue resolution, FAQs, service follow-ups.Promotional Messages (Template Messages): Product announcements, special offers, event invitations (sent only after prior customer opt-in)."
+          },
+          {
+            question: "How does the WhatsApp API work?",
+            answer: "Businesses integrate the API using API Key and authentication credentials.Messages are sent via API endpoints specifying the customer’s phone number, message template or free-form message, and media (if any).The WhatsApp Business API communicates with WhatsApp servers and delivers the message to the customer.Delivery status (sent, delivered, read) is returned in real time via webhooks or API responses."
+          },
+          {
+            question: "Is the WhatsApp API secure?",
+            answer: "Yes, our WhatsApp API provides high-level security:End-to-end encryption as per WhatsApp protocolsHTTPS encrypted API endpointsToken-based authenticationNo customer data is stored unnecessarily on our serversCompliant with GDPR and local data privacy regulations"
+          },
+          {
+            question: "How fast are messages delivered?",
+            answer: "Messages are typically delivered in real-time (within seconds).Delivery and read receipts are available via API webhooks or status queries."
+          },
+          {
+            question: "Do I need customer consent before sending messages?",
+            answer: "Yes, businesses must obtain explicit consent from customers before sending messages via WhatsApp:Transactional messages: Allowed without prior consent in some cases (e.g., OTP, payment confirmations).Promotional messages (Template Messages): Only allowed after explicit opt-in from the customer."
+          },
+       ]}
+      />
 
       <Certification />
-      <Footer />    
+      <Footer />
       <ChatWidget />
     </div>
   )

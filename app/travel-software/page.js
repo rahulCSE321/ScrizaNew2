@@ -8,7 +8,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'  
+
+import {
   ArrowRight,
   CheckCircle,
   Clock,
@@ -18,7 +20,7 @@ import {
   Globe,
   Users,
   CreditCard,
-  TrendingUp,   
+  TrendingUp,
   Star,
   Building,
   Send,
@@ -98,7 +100,7 @@ export default function TravelSoftwarePage() {
           message: `Travel Software Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -112,7 +114,7 @@ export default function TravelSoftwarePage() {
 
   const businessChallenges = [
     "Managing bookings",
-    "Coordinating itineraries", 
+    "Coordinating itineraries",
     "Delivering exceptional customer service"
   ]
 
@@ -267,10 +269,10 @@ export default function TravelSoftwarePage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/travel.png" 
-            alt="Travel Software" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/travel.png"
+            alt="Travel Software"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -286,7 +288,7 @@ export default function TravelSoftwarePage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Travel Software
                 </h2>
-                
+
                 <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-4 mb-8">
                   <p className="text-lg font-semibold text-red-800 mb-2">Are you still struggling with the challenges of:</p>
                   <div className="space-y-2">
@@ -334,7 +336,7 @@ export default function TravelSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Using a tech-based management system offers numerous benefits for travel businesses. In simple words, you can transform the way your travel agency operates by attaining the following benefits:
                 </p>
-                
+
                 <div className="space-y-8">
                   {managementBenefits.map((benefit, index) => (
                     <div key={index} className="space-y-4">
@@ -364,7 +366,7 @@ export default function TravelSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We are developing high performing software solutions for the travel industry for over a decade now. Owing to our decade long industry experience, we are able to cater to a wide range of users within the travel industry, such as:
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   {targetUsers.map((user, index) => (
                     <div key={index} className="space-y-4">
@@ -394,7 +396,7 @@ export default function TravelSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   The key feature of software can make a significant difference. The reason our developed software solutions are high in demand is that we go the extra mile and deliver bespoke solutions.
                 </p>
-                
+
                 <div className="space-y-8">
                   {softwareFeatures.map((feature, index) => (
                     <div key={index} className="space-y-4">
@@ -418,7 +420,7 @@ export default function TravelSoftwarePage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   The user-friendly interface can work in the following ways:
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {softwareWorkflow.map((workflow, index) => (
                     <div key={index} className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg">
@@ -444,10 +446,10 @@ export default function TravelSoftwarePage() {
                 <p className="text-white/90 mb-6">
                   Contact us now to explore the possibilities and embark on a journey towards increased efficiency, enhanced customer satisfaction, and business growth. Get started today!
                 </p>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-[#38857a] hover:bg-white/90"
-                  onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                  onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Schedule Free Demo
                   <Send className="ml-2 h-5 w-5" />
@@ -456,14 +458,52 @@ export default function TravelSoftwarePage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is Travel Software?",
+            answer: "Travel Software is a technology solution designed to help travel agencies, tour operators, and travel platforms manage bookings, itineraries, customer data, payments, and other operations efficiently. It can include flight booking, hotel booking, bus and cab reservations, travel packages, and more."
+          },
+          {
+            question: "Who should use Travel Software?",
+            answer: "Our Travel Software is ideal for: Travel agencies and tour operators, Online Travel Agencies (OTAs), Corporate travel management companies, Airlines, bus, and train operators, Hotels, resorts, and hospitality providers, and Any business involved in travel services and ticketing."
+          },
+          {
+            question: "What types of Travel Software do you develop?",
+            answer: "We develop a wide range of travel solutions, including: Flight Booking Software & APIs, Hotel Booking Software & APIs, Bus, Cab, and Train Booking Platforms, Travel Package Management Software, Online Ticketing Systems, Travel CRM & Customer Management Tools, Travel Expense & Reporting Solutions, and Mobile Travel Apps (iOS & Android)."
+          },
+          {
+            question: "How does Travel Software work?",
+            answer: "Customers search for travel services (flights, hotels, buses, packages) using the platform. The software connects to multiple service providers or GDS via APIs. Real-time availability, prices, and schedules are displayed to customers. Users select services, make payments, and confirm bookings. The system generates e-tickets, invoices, or itineraries automatically. Agencies can manage cancellations, refunds, and modifications easily."
+          },
+          {
+            question: "Is the software scalable and customizable?",
+            answer: "Yes, our travel software is fully scalable for high-volume bookings, modular and customizable to add new features, integrable with multiple service providers and payment gateways, and cloud-ready for global accessibility."
+          },
+          {
+            question: "Can it handle multi-channel bookings?",
+            answer: "Yes, our software supports direct website or app bookings, partner and agent portals, API integration with other travel platforms, and mobile booking for customers on the go."
+          },
+          {
+            question: "How secure is Travel Software?",
+            answer: "We prioritize security with: End-to-end encryption for all data and transactions, Secure payment gateway integrations (PCI DSS compliant), Role-based access controls, Regular audits and monitoring for potential vulnerabilities, and GDPR/local data privacy compliance."
+          },
+          {
+            question: "How long does it take to develop travel software?",
+            answer: "Typical timelines: Basic Booking Platform: 2–3 months, Medium Complexity Software (Flight + Hotel + Bus + Payment integration): 4–6 months, Enterprise-Grade Travel Solutions: 6–12 months. Exact timelines depend on features, integrations, and customization needs."
+          }
+        ]}
+      />
+
 
       <Certification />
       <Footer />

@@ -6,7 +6,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
-import { 
+import FAQ from '@/components/FAQ'
+
+import {
   CheckCircle,
   Send,
   Zap,
@@ -104,7 +106,7 @@ export default function DrivingLicenceVerificationAPIPage() {
           message: `Driving Licence Verification API Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -190,10 +192,10 @@ export default function DrivingLicenceVerificationAPIPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/driving-licence-verification-api-hero.png" 
-            alt="Driving Licence Verification API Solutions" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/driving-licence-verification-api-hero.png"
+            alt="Driving Licence Verification API Solutions"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -204,7 +206,7 @@ export default function DrivingLicenceVerificationAPIPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
-              
+
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -273,7 +275,7 @@ export default function DrivingLicenceVerificationAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Check the authenticity of a driving license with useful validation outputs. The reliable API can be deployed with stringent encryption protocol so the integrity of data retrieved from government databases can be secured
                 </p>
-                
+
                 <div className="space-y-6">
                   {apiFeatures.map((feature, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -299,7 +301,7 @@ export default function DrivingLicenceVerificationAPIPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   A driving license is one of the widely used documents for identity proof. Save yourself from being a victim of fraudulent activities. With our online verification solutions, you can easily detect fraud and save costs on the onboarding process
                 </p>
-                
+
                 <div className="space-y-6">
                   {onlineBenefits.map((benefit, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6">
@@ -375,16 +377,16 @@ export default function DrivingLicenceVerificationAPIPage() {
                   Our representatives are available 24/7. So, request an API key or book a demo right now
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Request Free Demo
                     <Send className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -396,18 +398,60 @@ export default function DrivingLicenceVerificationAPIPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book For Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is the Driving License Verification API?",
+            answer: "Driving License Verification API allows businesses and organizations to verify the authenticity of a driving license in real-time. It helps confirm the license holder’s details such as name, date of birth, license number, and validity to prevent fraud and ensure regulatory compliance."
+          },
+          {
+            question: "Who should use the Driving License Verification API?",
+            answer: "The API is ideal for: Banks and financial institutions for KYC and loan verification, Vehicle rental and cab services, Insurance companies for motor insurance validation, Government and traffic authorities, Employers requiring driver verification, and Any organization that needs secure identity and license validation."
+          },
+          {
+            question: "What details can be verified through the API?",
+            answer: "The API can verify: Driving License Number, License holder’s full name, Date of birth, Issuing state or RTO, License validity and expiry date, and Vehicle categories authorized to drive."
+          },
+          {
+            question: "How does the Driving License Verification API work?",
+            answer: "The user provides their driving license number and relevant personal details. The API sends a request to the authorized RTO database or government verification system. A response is returned indicating verification status (valid/invalid) along with license details. Businesses can use this response to approve services, applications, or KYC processes."
+          },
+          {
+            question: "Is the Driving License Verification API secure?",
+            answer: "Yes, we ensure high-level security: All API requests are encrypted via HTTPS, Role-based access control for internal systems, Compliance with government data privacy regulations, and No unauthorized storage of personal license data."
+          },
+          {
+            question: "Can the API be integrated with web and mobile applications?",
+            answer: "Yes, it can be integrated with: Web applications (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for automated verification workflows."
+          },
+          {
+            question: "Do users need to provide consent for verification?",
+            answer: "Yes, explicit user consent is mandatory before verifying a driving license. Consent ensures compliance with data privacy and regulatory guidelines."
+          },
+          {
+            question: "Can the API handle bulk verification?",
+            answer: "Yes, bulk verification is supported for enterprises or services handling multiple driving license checks simultaneously. Status reports can be generated in real-time."
+          },
+          {
+            question: "How fast is the verification process?",
+            answer: "Individual verification is usually completed within seconds. Bulk verification processing time depends on the number of records but remains fast and efficient."
+          }
+        ]}
+      />
+
 
       <Certification />
       <Footer />
       <ChatWidget />
-    </div>  
+    </div>
   )
 }

@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
+
+
 import { 
   CheckCircle,
   Send,
@@ -389,6 +392,61 @@ export default function UPIVerificationAPIPage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is the UPI Verification API?",
+            answer: "UPI Verification API allows businesses to verify the validity and ownership of a UPI ID (Virtual Payment Address) in real-time. It ensures the UPI ID is active and linked to the correct bank account, helping prevent failed transactions and fraud."
+          },
+          {
+            question: "Who should use the UPI Verification API?",
+            answer: "The API is ideal for: Fintech companies and payment platforms, Banks and financial institutions, E-commerce and marketplace platforms, Wallet providers and digital payment services, Payroll and salary disbursement platforms, and Any business processing digital payments via UPI."
+          },
+          {
+            question: "What details can be verified through the API?",
+            answer: "The API can verify: UPI ID / Virtual Payment Address (VPA), Linked bank account number, Bank name and branch details, Account holder name, and Status of the UPI ID (active/inactive)."
+          },
+          {
+            question: "How does the UPI Verification API work?",
+            answer: "The user provides their UPI ID (and optionally account holder name). The API sends a request to the bank/UPI network for validation. A response is returned confirming whether the UPI ID is valid and linked to the correct account. Businesses can use this data to approve payments, reduce transaction failures, and ensure secure fund transfers."
+          },
+          {
+            question: "Is the UPI Verification API secure?",
+            answer: "Yes, security is ensured through: HTTPS encryption for all API requests, Token or API key-based authentication, Compliance with banking regulations and NPCI guidelines, and No unauthorized storage of sensitive UPI or account data."
+          },
+          {
+            question: "Can the API be integrated with web and mobile applications?",
+            answer: "Yes, the API can be integrated with: Web applications (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for automated UPI ID validation workflows."
+          },
+          {
+            question: "Do users need to provide consent for verification?",
+            answer: "Yes, explicit user consent is recommended before verifying UPI IDs to comply with privacy and banking regulations."
+          },
+          {
+            question: "Can the API handle bulk verification?",
+            answer: "Yes, bulk verification is supported for enterprises or platforms handling multiple UPI IDs simultaneously. Real-time status reports and verification logs are provided."
+          },
+          {
+            question: "How fast is the verification process?",
+            answer: "Individual UPI ID verification is typically completed within seconds. Bulk verification depends on the number of records but remains efficient and scalable."
+          },
+          {
+            question: "Are there regulatory compliances to follow?",
+            answer: "Yes, UPI verification requires compliance with: NPCI (National Payments Corporation of India) guidelines, Banking regulations and KYC norms, and Data privacy laws applicable to digital payments."
+          },
+          {
+            question: "Do you provide post-integration support?",
+            answer: "Yes, our services include: API integration guidance and troubleshooting, Error resolution and monitoring, Updates for changes in UPI network APIs or banking protocols, and Technical support for secure deployment."
+          },
+          {
+            question: "How do I get started with UPI Verification API?",
+            answer: "Contact us with your business requirements, Receive API documentation and integration guidelines, Test the API with sample requests, and Go live with secure, real-time UPI verification."
+          }
+        ]}
+      />
+
+
 
       <Certification />
       <Footer />

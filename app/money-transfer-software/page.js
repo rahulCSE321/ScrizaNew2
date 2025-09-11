@@ -356,23 +356,26 @@ export default function MoneyTransferSoftwarePage() {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "How long do you take to develop money transfer software?",
-            answer: "Scriza is a full-fledged software development agency hence we have a dedicated department to meet your unique needs. Although the timeline for money transfer software development depends on the complexity of the project, we may take a few weeks to a few months to develop robust and fully functional software."
-          },
-
-          {
-            question: "Can you customize the money transfer software as per my business requirements?",
-            answer: "Yes, we can customize the money transfer software to align with the unique requirements of a business. We can include tailored features, branding, API integrations, and compliance with industry regulations."
+            question: "What is Money Transfer Software?",
+            answer: "Money Transfer Software is a digital platform that enables individuals and businesses to send and receive funds electronically, often across different countries and currencies."
           },
           {
-            question: "Does your money transfer software integrate with existing banking systems or payment gateways?",
-            answer: "Yes, our offered money transfer software ensures seamless transactions by integrating various banking systems and payment gateways. Connect now to book a free demo that showcases the operational efficiency of our developed money remittance software."
+            question: "Why do businesses need remittance software?",
+            answer: "Businesses use remittance software to streamline and automate the process of sending payments, reduce errors, ensure compliance with financial regulations, and improve overall efficiency in managing funds."
           },
           {
-            question: "What is the difference between Aadhaar verification and validation?",
-            answer: "Aadhaar verification is a process of verifying the identity of a person using their Aadhaar number. Aadhaar validation is a process of validating the identity of a person using their Aadhaar number."
+            question: "How do money and remittance transfers work?",
+            answer: "These transfers involve sending funds from one party to another, either domestically or internationally, typically through secure financial networks that process and settle transactions quickly."
           },
-         ]}
+          {
+            question: "Which currencies and countries are supported?",
+            answer: "Most money transfer software supports multiple currencies and allows transfers to a wide range of countries, enabling global money movement."
+          },
+          {
+            question: "How long does it take for money to arrive?",
+            answer: "Transfer times vary depending on the method used, destination country, and banking processes, but many services offer instant or same-day transfers, while others may take a few business days."
+          }
+        ]}
       />
       <Certification />
       <Footer />

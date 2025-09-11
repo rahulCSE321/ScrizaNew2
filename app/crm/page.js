@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ'
 import { 
   ArrowRight,
   CheckCircle,
@@ -437,6 +438,34 @@ export default function CrmPage() {
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is CRM Management Software?",
+            answer: "CRM (Customer Relationship Management) software helps businesses manage customer interactions, track leads, automate sales processes, and improve customer service. It centralizes customer data so teams can build better relationships and increase efficiency."
+          },
+          {
+            question: "What are the key features of CRM software?",
+            answer: "Most CRM systems include: Contact & lead management Sales pipeline tracking Marketing automation Customer support/ticketing Analytics & reporting Integration with email, phone, and third-party apps"
+          },
+          {
+            question: "Who can benefit from using CRM software?",
+            answer: "CRM software is useful for: Small businesses wanting to track clients Sales teams managing leads and pipelines Marketing teams running campaigns Customer service teams handling queries Large enterprises coordinating across departments"
+          },
+          {
+            question: "How does CRM software improve business performance?",
+            answer: "CRM improves efficiency by: Automating routine tasks Reducing errors with centralized data Improving communication within teams Enhancing customer experience with personalized interactions Providing insights through reports and analytics"
+          },
+          {
+            question: "What factors should I consider when choosing a CRM?",
+            answer: "Key considerations include: Ease of use and training requirements Scalability (will it grow with your business?) Mobile accessibility Integration with existing tools (email, ERP, etc.) Pricing and subscription model Customer support availability"
+          }
+        ]}
+      />
+
+
+
 
       <Certification />
       <Footer />

@@ -5,7 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
-import { 
+import FAQ from '@/components/FAQ' 
+import {
   CheckCircle,
   Send,
   Zap,
@@ -100,7 +101,7 @@ export default function SoftwareDevelopmentPage() {
           message: `Software Development Demo Request - Selected Option: ${formData.option}`
         }),
       })
-      
+
       if (response.ok) {
         alert('Thank you! We will get back to you soon.')
       } else {
@@ -114,7 +115,7 @@ export default function SoftwareDevelopmentPage() {
 
   const developmentFeatures = [
     "Tailor-made Solutions",
-    "Competitive Pricing", 
+    "Competitive Pricing",
     "Experienced Team",
     "Quality Assurance",
     "Timely Delivery",
@@ -270,7 +271,7 @@ export default function SoftwareDevelopmentPage() {
 
   const companyAdvantages = [
     "Bespoke solutions tailored to your business requirements",
-    "Experienced developers skilled in various industries", 
+    "Experienced developers skilled in various industries",
     "High-end tools to guarantee performance",
     "Well-timed delivery within agreed timelines",
     "Affordable packages with budget-friendly pricing",
@@ -284,10 +285,10 @@ export default function SoftwareDevelopmentPage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
-          <img 
-            src="/software-development-hero.png" 
-            alt="Software Development Services" 
-            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+          <img
+            src="/software-development-hero.png"
+            alt="Software Development Services"
+            className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
         </div>
       </section>
@@ -387,7 +388,7 @@ export default function SoftwareDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   For us, each project is unique and therefore has a specific timeline. The development timeline varies for each project. Duration depends on the complexity of the project, the scope of features, and the resources allocated. We can deliver smaller projects within a few weeks or take several months or more for larger and more intricate software solutions.
                 </p>
-                
+
                 <div className="space-y-6">
                   {developmentProcess.map((process, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -419,7 +420,7 @@ export default function SoftwareDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We specialize in exceeding your expectations, thanks to our tech-savvy family, we have become a trusted choice in various sectors.
                 </p>
-                
+
                 <div className="space-y-8">
                   {specializations.map((service, index) => (
                     <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
@@ -468,7 +469,7 @@ export default function SoftwareDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   We have decade long expertise in bringing the vision to life. Our team is proficient in working with various platforms and technologies.
                 </p>
-                
+
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Development Platforms</h3>
                   <div className="grid md:grid-cols-2 gap-6">
@@ -515,7 +516,7 @@ export default function SoftwareDevelopmentPage() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   So far, we have successfully delivered over 750 software development projects and helped big and small enterprises achieve their business targets.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   {companyAdvantages.map((advantage, index) => (
                     <div key={index} className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg">
@@ -596,16 +597,16 @@ export default function SoftwareDevelopmentPage() {
                   Schedule a discovery call right now!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-[#38857a] hover:bg-white/90"
-                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({behavior: 'smooth'})}
+                    onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Schedule Discovery Call
                     <Calendar className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10"
                   >
@@ -617,14 +618,52 @@ export default function SoftwareDevelopmentPage() {
             </div>
 
             {/* Demo Form Sidebar */}
-            <DemoBookingForm 
-              onSubmit={handleDemoSubmit} 
+            <DemoBookingForm
+              onSubmit={handleDemoSubmit}
               title="Book a Free Demo"
-              showApiServices={true} 
+              showApiServices={true}
             />
           </div>
         </div>
       </section>
+      <FAQ
+        title="Frequently Asked Questions"
+        faqs={[
+          {
+            question: "What is a Software Development Service?",
+            answer: "Software Development Service refers to the process of creating custom software solutions tailored to meet the unique needs of your business. It involves the design, development, testing, deployment, and maintenance of applications or systems that help automate processes, improve productivity, and provide competitive advantages."
+          },
+          {
+            question: "Who should use Software Development Services?",
+            answer: "Our Software Development Services are ideal for: Startups building innovative digital products, Small and medium-sized businesses automating internal workflows, Enterprises seeking scalable business solutions, Educational institutions developing learning management systems, Healthcare providers building patient management solutions, Any organization needing custom solutions not addressed by off-the-shelf software."
+          },
+          {
+            question: "What types of software do you develop?",
+            answer: "We develop a wide range of software solutions, including: Web Applications (CRM, ERP, SaaS Platforms), Mobile Applications (iOS & Android), Desktop Applications, Cloud-based Software Solutions, Business Automation Tools, Data Analytics and Reporting Tools, APIs and Integrations with third-party services, Custom Software for Industry-specific needs (Healthcare, Finance, Logistics, etc.)."
+          },
+          {
+            question: "How does your software development process work?",
+            answer: "Requirement Analysis: Understanding your business needs, Planning & Design: Creating wireframes, prototypes, and a technical roadmap, Development: Agile, iterative coding with regular demos, Testing: Rigorous functional, performance, and security testing, Deployment: Launching the software in your environment, Maintenance: Ongoing support, updates, and performance monitoring."
+          },
+          {
+            question: "Is the software scalable for future business growth?",
+            answer: "Yes, we build software solutions with scalability in mind: Modular architecture, Cloud-native technologies, Microservices (where applicable), Database optimization for increasing data volume. This allows your software to grow alongside your business."
+          },
+          {
+            question: "How long does it take to develop custom software?",
+            answer: "Typical timelines: Small software tools or applications: 1–3 months, Medium projects (CRM, ERP): 4–6 months, Large-scale software systems: 6–12+ months. We provide a detailed project plan with timelines after discussing your specific requirements."
+          },
+          {
+            question: "How do you ensure software quality and security?",
+            answer: "Thorough unit, integration, system, and acceptance testing, Secure coding practices (OWASP standards), Data encryption (SSL, AES), Role-based access controls, Regular security audits, GDPR and industry compliance (HIPAA, PCI-DSS, etc., when applicable)."
+          },
+          {
+            question: "Can I update the software myself after development?",
+            answer: "Yes, depending on your preference: We can build an intuitive Admin Panel or CMS for self-management, Provide full technical documentation and user training, Offer maintenance support for updates and feature additions."
+          },
+        ]}
+      />
+
 
       <Certification />
       <Footer />
