@@ -49,6 +49,9 @@ import {
   PiggyBank
 } from 'lucide-react'
 
+
+
+
 export default function UPICollectionPage() {
   const handleDemoSubmit = async (formData) => {
     try {

@@ -200,7 +200,7 @@ export default function VerificationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/verification-api-hero.png"
+            src="/validation.png"
             alt="Verification API Solutions"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />

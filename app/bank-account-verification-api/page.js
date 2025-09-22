@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
+import FAQ from '@/components/FAQ' 
 import { 
   CheckCircle,
   Send,
@@ -88,6 +89,9 @@ import {
   TrendingDown
 } from 'lucide-react'
 
+
+
+
 export default function BankAccountVerificationAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -123,7 +127,7 @@ export default function BankAccountVerificationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/bank-verification-api-hero.png" 
+            src="/BankAccountVerification.png" 
             alt="Bank Account Verification API Solutions" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />
@@ -445,6 +449,52 @@ export default function BankAccountVerificationAPIPage() {
           </div>
         </div>
       </section>
+      <FAQ
+  title="Frequently Asked Questions"
+  faqs={[
+    {
+      question: "What is the Bank Account Verification API?",
+      answer: "Bank Account Verification API allows businesses to verify the authenticity and validity of a bank account in real-time. It ensures the account number, IFSC code, and account holder details are correct, helping prevent fraud and reduce payment failures."
+    },
+    {
+      question: "Who should use the Bank Account Verification API?",
+      answer: "The API is ideal for: Banks and financial institutions for KYC and payment validation, Fintech companies processing payouts or collections, Payroll and HR platforms for employee salary disbursement, Loan and insurance providers verifying customer accounts, E-commerce platforms handling refunds and payouts, and Any business processing bulk or high-value transactions."
+    },
+    {
+      question: "What details can be verified through the API?",
+      answer: "The API can verify: Bank account number, Account holder name, IFSC code and branch details, Bank name and branch address, Account type (Savings, Current, NRE/NRO, etc.), and Status of the bank account (active/inactive)."
+    },
+    {
+      question: "How does the Bank Account Verification API work?",
+      answer: "The user provides the bank account number and IFSC code (and optionally account holder name). The API sends a request to the authorized banking network or validation system. A response is returned confirming whether the account is valid and matching the provided details. Businesses can use this data to approve payouts, reduce transaction failures, and comply with KYC regulations."
+    },
+    {
+      question: "Is the Bank Account Verification API secure?",
+      answer: "Yes, security is ensured through: HTTPS encryption for all API requests, Token or API key-based authentication, Compliance with banking and data privacy regulations, and No unauthorized storage of sensitive banking information."
+    },
+    {
+      question: "Can the API be integrated with web and mobile applications?",
+      answer: "Yes, the API can be integrated with: Web applications (PHP, Java, .NET, Node.js), Mobile applications (iOS, Android, Flutter, React Native), and Backend systems for automated bank account validation workflows."
+    },
+    {
+      question: "Do users need to provide consent for verification?",
+      answer: "Yes, explicit user consent is recommended before verifying bank account details to ensure compliance with privacy and banking regulations."
+    },
+    {
+      question: "Can the API handle bulk verification?",
+      answer: "Yes, bulk verification is supported for enterprises or platforms handling multiple accounts at once. Real-time status reports and validation summaries are available for all records."
+    },
+    {
+      question: "How fast is the verification process?",
+      answer: "Individual account verification is typically completed within seconds. Bulk verification depends on the number of accounts but remains fast and scalable."
+    },
+    {
+      question: "Are there regulatory compliances to follow?",
+      answer: "Yes, bank account verification requires compliance with: Banking regulations and guidelines, KYC and anti-fraud norms, and Data privacy laws like GDPR or local regulations."
+    }
+  ]}
+/>
+
 
       <Certification />
       <Footer />

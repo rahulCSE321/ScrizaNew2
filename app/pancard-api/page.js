@@ -190,9 +190,9 @@ export default function PancardApiPage() {
                   <span className="text-[#38857a] font-semibold">PAN card verification API</span>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   API for PAN verification and validation
-                </h2>
+                </h1>
                 <p className="text-xl text-[#38857a] font-semibold mb-6">
                   Elevate Your Business with a Real-Time PAN verification and validation process
                 </p>

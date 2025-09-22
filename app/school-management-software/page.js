@@ -31,6 +31,9 @@ import {
   ShieldCheck
 } from 'lucide-react'
 
+
+
+
 export default function SchoolManagementSoftwarePage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -384,20 +387,29 @@ export default function SchoolManagementSoftwarePage() {
         title="Frequently Asked Questions"
         faqs={[
           {
-            question: "How does school management software work?",
-            answer: "A school management system features various modules that can be operated through a user-friendly interface. Get in touch with us to learn more about the cloud based secure school management technology."
+            question: "What is School Management Software?",
+            answer: "School Management Software is a digital platform that helps schools, colleges, and educational institutions manage daily operations such as student admissions, attendance, exams, fees, staff management, and communication between teachers, parents, and students."
           },
           {
-            question: "What are the uses of school management system technology?",
-            answer: "With our hi-tech solution, you can automate administrative tasks, such as attendance tracking, fee management, academic record keeping and communication."
+            question: "What are the key features of School Management Software?",
+            answer: "Most systems include: Student information management Attendance and timetable management Online fee collection & finance management Examination & grade management Parent-teacher communication portal Library, transport, and hostel management Mobile app access for parents and teachers"
           },
           {
-            question: "What are the benefits of using software for school management?",
-            answer: "Invest in a school management software technology and experience benefits like cost savings, improved data accuracy, and efficient administrative processes."
+            question: "How does School Management Software benefit schools?",
+            answer: "It improves efficiency by: Reducing paperwork and manual errors Automating administrative tasks Enhancing parent-teacher communication Ensuring transparency in fee collection & academics Providing real-time reports for better decision-making"
+          },
+          {
+            question: "Is School Management Software suitable for small schools?",
+            answer: "Yes. School Management Software is scalable and can be customized for small schools, coaching centers, or large universities. Small schools can start with basic features like attendance, fees, and exams, and expand later as needed."
+          },
+          {
+            question: "How secure is the data in School Management Software?",
+            answer: "Most modern systems use cloud-based solutions with encryption, secure login, role-based access, and regular backups to ensure student and staff data is safe from unauthorized access."
           }
-          
         ]}
       />
+          
+      
       <Certification />
       <Footer />
       <ChatWidget />

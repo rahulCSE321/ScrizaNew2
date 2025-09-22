@@ -56,6 +56,9 @@ import {
   Phone
 } from 'lucide-react'
 
+
+
+
 export default function CreditCardBillPaymentPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -222,9 +225,9 @@ export default function CreditCardBillPaymentPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   Credit Card Bill Payments are made simple, seamless and secure with Scriza API
-                </h2>
+                </h1>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Scriza brings forth a cutting-edge solution that empowers businesses to streamline their payment processes. Presenting a seamless payment experience for your customers. Try our trusted API platform to make payments for:
                 </p>
@@ -242,7 +245,7 @@ export default function CreditCardBillPaymentPage() {
                 </p>
 
                 <div className="bg-gradient-to-r from-[#38857a]/10 to-[#FF914C]/10 rounded-xl p-6 mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">A hassle-free experience for your customers while making credit card bill payments</h4>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-4">A hassle-free experience for your customers while making credit card bill payments</h2>
                   <div className="space-y-3">
                     {customerBenefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">

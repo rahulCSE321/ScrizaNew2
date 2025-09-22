@@ -90,6 +90,9 @@ import {
   TrendingDown
 } from 'lucide-react'
 
+
+
+
 export default function VehicleRCVerificationAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -193,7 +196,7 @@ export default function VehicleRCVerificationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/vehicle-rc-verification-api-hero.png" 
+            src="/UPIverificationAPI.png" 
             alt="Vehicle RC Verification API Solutions" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />

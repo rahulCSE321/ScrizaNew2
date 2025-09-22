@@ -90,6 +90,9 @@ import {
   Image
 } from 'lucide-react'
 
+
+
+
 export default function HotelBookingAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -279,7 +282,7 @@ export default function HotelBookingAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/hotel-booking-api-hero.png"
+            src="/hotel.png"
             alt="Hotel Booking API Solutions"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />

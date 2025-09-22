@@ -11,6 +11,8 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import Certification from '@/components/Certification'
 import { useRouter } from 'next/navigation'
+import { Monitor, Settings } from 'lucide-react'
+
 import {
   Phone,
   Mail,
@@ -261,6 +263,7 @@ export default function App() {
       category: "Payments",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwcGF5bWVudHxlbnwwfHx8Ymx1ZXwxNzUzOTQ2MTQ5fDA&ixlib=rb-4.0.3&q=85"
     }
+    
   ]
 
   const testimonials = [
@@ -408,74 +411,115 @@ export default function App() {
 
       {/* Who We Are Section */}
       <section id="about" className="py-12 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6 md:space-y-8">
-              <div className="space-y-3 md:space-y-4">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Who We Are</h2>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight" style={{ color: '#FF914C' }}>
-                  Powering Software Passionate about Technology.
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                  If you're looking for a top software development company that can be trusted to deliver high-quality, innovative solutions at a reasonable price, you've come to the right place. Scriza is the best software development company in the industry. We've been helping our clients solve their biggest problems with Tech.
-                </p>
-              </div>
+  <div className="container mx-auto px-4">
+    <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="space-y-6 md:space-y-8">
+        <div className="space-y-3 md:space-y-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Who We Are</h2>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight" style={{ color: '#FF914C' }}>
+            Powering Software Passionate about Technology.
+          </h3>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+            If you're looking for a top software development company that can be trusted to deliver high-quality, innovative solutions at a reasonable price, you've come to the right place. Scriza is the best software development company in the industry. We've been helping our clients solve their biggest problems with Tech.
+          </p>
+        </div>
 
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-center space-x-3 md:space-x-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#38857a]/10 flex items-center justify-center flex-shrink-0">
-                    <Code className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#38857a' }} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Custom Software Development</h4>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                      <div className="bg-[#38857a] h-2 rounded-full" style={{ width: '92%' }}></div>
-                    </div>
-                    <span className="text-xs md:text-sm text-gray-600 mt-1">92%</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3 md:space-x-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#FF914C]/10 flex items-center justify-center flex-shrink-0">
-                    <Smartphone className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#FF914C' }} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Application Development</h4>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                      <div className="bg-[#FF914C] h-2 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                    <span className="text-xs md:text-sm text-gray-600 mt-1">90%</span>
-                  </div>
-                </div>
-              </div>
-
-              <Button
-                size="lg"
-                style={{ backgroundColor: '#38857a' }}
-                className="text-white hover:opacity-90"
-                onClick={() => document.getElementById('specialized-services').scrollIntoView({ behavior: 'smooth' })}
-              >
-                Discover More
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+        <div className="space-y-4 md:space-y-6">
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#38857a]/10 flex items-center justify-center flex-shrink-0">
+              <Code className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#38857a' }} />
             </div>
-
-            <div className="relative mt-8 lg:mt-0">
-              <img
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHx0ZWNobm9sb2d5fGVufDB8fHxibHVlfDE3NTM5NDYxNDl8MA&ixlib=rb-4.1.0&q=85"
-                alt="Technology Innovation"
-                className="rounded-lg shadow-2xl w-full h-auto"
-              />
-              <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-white p-4 md:p-6 rounded-lg shadow-lg">
-                <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold" style={{ color: '#38857a' }}>2+</div>
-                  <div className="text-xs md:text-sm text-gray-600">Years Experience</div>
-                </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Custom Software Development</h4>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="bg-[#38857a] h-2 rounded-full" style={{ width: '92%' }}></div>
               </div>
+              <span className="text-xs md:text-sm text-gray-600 mt-1">92%</span>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#FF914C]/10 flex items-center justify-center flex-shrink-0">
+              <Smartphone className="h-6 w-6 md:h-8 md:w-8" style={{ color: '#FF914C' }} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Application Development</h4>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="bg-[#FF914C] h-2 rounded-full" style={{ width: '90%' }}></div>
+              </div>
+              <span className="text-xs md:text-sm text-gray-600 mt-1">90%</span>
+            </div>
+          </div>
+
+          {/* New Services Added Below */}
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+              <Monitor className="h-6 w-6 md:h-8 md:w-8 text-blue-500" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Software Development</h4>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="bg-blue-500 h-2 rounded-full" style={{ width: '88%' }}></div>
+              </div>
+              <span className="text-xs md:text-sm text-gray-600 mt-1">88%</span>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <Settings className="h-6 w-6 md:h-8 md:w-8 text-purple-500" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">ERP Development</h4>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="bg-purple-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+              </div>
+              <span className="text-xs md:text-sm text-gray-600 mt-1">85%</span>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+              <CreditCard className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">Fintech Software Development</h4>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="bg-green-500 h-2 rounded-full" style={{ width: '87%' }}></div>
+              </div>
+              <span className="text-xs md:text-sm text-gray-600 mt-1">87%</span>
             </div>
           </div>
         </div>
-      </section>
+
+        <Button
+          size="lg"
+          style={{ backgroundColor: '#38857a' }}
+          className="text-white hover:opacity-90"
+          onClick={() => document.getElementById('specialized-services').scrollIntoView({ behavior: 'smooth' })}
+        >
+          Discover More
+          <ArrowRight className="ml-2 h-5 w-5" />
+        </Button>
+      </div>
+
+      <div className="relative mt-8 lg:mt-0">
+        <img
+          src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHx0ZWNobm9sb2d5fGVufDB8fHxibHVlfDE3NTM5NDYxNDl8MA&ixlib=rb-4.1.0&q=85"
+          alt="Technology Innovation"
+          className="rounded-lg shadow-2xl w-full h-auto"
+        />
+        <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-white p-4 md:p-6 rounded-lg shadow-lg">
+          <div className="text-center">
+            <div className="text-2xl md:text-3xl font-bold" style={{ color: '#38857a' }}>2+</div>
+            <div className="text-xs md:text-sm text-gray-600">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Specialized Services Section */}
       <section id="specialized-services" className="relative py-12 md:py-24 bg-white">

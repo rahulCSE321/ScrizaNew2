@@ -75,6 +75,9 @@ import {
   ShieldAlert
 } from 'lucide-react'
 
+
+
+
 export default function SMSAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -243,7 +246,7 @@ export default function SMSAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/sms-api-hero.png" 
+            src="/SMSAPi.png" 
             alt="SMS API Provider Solutions" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />

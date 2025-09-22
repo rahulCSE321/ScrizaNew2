@@ -86,6 +86,9 @@ import {
   Gamepad2
 } from 'lucide-react'
 
+
+
+
 import Certification from '@/components/Certification'
 
 export default function ApplicationDevelopmentPage() {
@@ -312,9 +315,9 @@ export default function ApplicationDevelopmentPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   India's Best Web and Mobile App Development Service Providers
-                </h2>
+                </h1>
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Driving growth with cutting-edge e-commerce and mobile app solutions
                 </p>

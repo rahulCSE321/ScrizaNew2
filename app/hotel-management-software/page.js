@@ -35,6 +35,8 @@ import {
   Languages
 } from 'lucide-react'
 
+
+
 export default function HotelManagementSoftwarePage() {
   const handleDemoSubmit = async (formData) => {
     try {

@@ -66,6 +66,8 @@ import {
   RefreshCw
 } from 'lucide-react'
 
+
+
 export default function LICPremiumAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -244,7 +246,7 @@ export default function LICPremiumAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/lic-premium.png" 
+            src="/LIC.png" 
             alt="LIC Premium Payment API" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />

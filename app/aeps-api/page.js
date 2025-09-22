@@ -38,6 +38,8 @@ import {
   Truck
 } from 'lucide-react'
 
+
+
 export default function AepsApiPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -208,9 +210,9 @@ export default function AepsApiPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   Best AePS API Service Provider
-                </h2>
+                </h1>
                 <p className="text-xl text-[#38857a] font-semibold mb-6">
                   India's most trusted low investment Aadhar-enabled payment technology
                 </p>

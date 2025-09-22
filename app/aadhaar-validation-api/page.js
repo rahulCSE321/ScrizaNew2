@@ -92,6 +92,9 @@ import {
   FileImage
 } from 'lucide-react'
 
+ 
+
+
 export default function AadhaarValidationAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -160,7 +163,7 @@ export default function AadhaarValidationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/aadhaar-validation-api-hero.png"
+            src="/AAdhaarVelidation.png"
             alt="Aadhaar Validation API Solutions"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />

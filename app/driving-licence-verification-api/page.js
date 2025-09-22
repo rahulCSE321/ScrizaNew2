@@ -91,6 +91,9 @@ import {
   Upload
 } from 'lucide-react'
 
+
+
+
 export default function DrivingLicenceVerificationAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -193,7 +196,7 @@ export default function DrivingLicenceVerificationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/driving-licence-verification-api-hero.png"
+            src="/drivingLicence.png"
             alt="Driving Licence Verification API Solutions"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />

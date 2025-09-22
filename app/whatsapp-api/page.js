@@ -83,6 +83,9 @@ import {
   Square
 } from 'lucide-react'
 
+
+
+
 export default function WhatsAppAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -260,7 +263,7 @@ export default function WhatsAppAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/whatsapp-api-hero.png"
+            src="/whatsapp.png"
             alt="WhatsApp API Solutions"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />

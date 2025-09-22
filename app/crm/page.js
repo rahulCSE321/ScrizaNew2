@@ -54,6 +54,9 @@ import {
   Layers
 } from 'lucide-react'
 
+
+
+
 export default function CrmPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -221,9 +224,9 @@ export default function CrmPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   The Best CRM for small business
-                </h2>
+                </h1>
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Sales, leads or opportunities manage everything with our bespoke CRM
                 </p>

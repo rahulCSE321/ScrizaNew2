@@ -35,6 +35,9 @@ import {
   Scale
 } from 'lucide-react'
 
+
+
+
 export default function MicroAtmMachineProvidersPage() {
   const handleDemoSubmit = async (formData) => {
     try {

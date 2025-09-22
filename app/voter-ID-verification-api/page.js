@@ -88,6 +88,9 @@ import {
   TrendingDown
 } from 'lucide-react'
 
+
+
+
 export default function VoterIDVerificationAPIPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -147,7 +150,7 @@ export default function VoterIDVerificationAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/voter-id-verification-api-hero.png" 
+            src="/voterIDVerification.png" 
             alt="Voter ID Verification API Solutions" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />

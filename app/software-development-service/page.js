@@ -84,6 +84,10 @@ import {
   BookOpen
 } from 'lucide-react'
 
+
+
+
+
 import Certification from '@/components/Certification'
 
 export default function SoftwareDevelopmentPage() {

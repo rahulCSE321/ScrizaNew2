@@ -304,7 +304,7 @@ export default function BusBookingAPIPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/bus-booking-api-hero.png" 
+            src="/BusBooking.png" 
             alt="Bus Booking API Solutions" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />
@@ -319,9 +319,9 @@ export default function BusBookingAPIPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   Fast and Error Free Bus Booking API
-                </h2>
+                </h1>
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Simplifying bus ticket reservation for 1000+ clients
                 </p>
@@ -338,7 +338,7 @@ export default function BusBookingAPIPage() {
                 </div>
 
                 <div className="bg-gradient-to-r from-[#38857a]/10 to-[#FF914C]/10 rounded-xl p-6 mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Benefits</h4>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-4">Key Benefits</h2>
                   <div className="space-y-3">
                     {keyBenefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">

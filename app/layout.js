@@ -17,6 +17,11 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
   },
+  viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/favicon.ico",
+  }
+
 }
 
 export default function RootLayout({ children }) {

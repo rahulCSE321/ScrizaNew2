@@ -94,6 +94,9 @@ import {
   Network
 } from 'lucide-react'
 
+
+ 
+
 export default function APIIntegrationServicesPage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -381,10 +384,10 @@ export default function APIIntegrationServicesPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   API Integration Services
-                </h2>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">Recharge Software</h3>
+                </h1>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Recharge Software</h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Whether you're a business owner, a developer, or an IT professional, API integration can revolutionize the way you work. Scriza is well-equipped to navigate you through the challenges of complex integration processes and security concerns. We have decade long expertise in meeting your unique needs. Get in touch for custom API development and integration.

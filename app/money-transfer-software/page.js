@@ -25,6 +25,7 @@ import {
   Send
 } from 'lucide-react'
 
+
 export default function MoneyTransferSoftwarePage() {
   const handleDemoSubmit = async (formData) => {
     try {
@@ -125,6 +126,8 @@ export default function MoneyTransferSoftwarePage() {
     "Currency preferences: You can set language and currency preferences to better serve your clientele from different regions or market",
     "Custom Notifications and Alerts: Features like confirmation emails, status updates, and security alerts can be customized to provide a personalized user experience."
   ]
+  
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -148,9 +151,9 @@ export default function MoneyTransferSoftwarePage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   Money Transfer Software
-                </h2>
+                </h1>
                 <p className="text-xl text-[#38857a] font-semibold mb-6">
                   Transferring money just got easier with the all bank money transfer software
                 </p>
@@ -166,7 +169,7 @@ export default function MoneyTransferSoftwarePage() {
                         {feature.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                        <h2 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h2>
                         <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                       </div>
                     </div>

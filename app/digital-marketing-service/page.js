@@ -7,7 +7,7 @@ import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
 import FAQ from '@/components/FAQ' 
-import {
+import { 
   CheckCircle,
   Send,
   Zap,
@@ -87,6 +87,9 @@ import {
   Hash,
   Camera
 } from 'lucide-react'
+
+ 
+
 
 export default function DigitalMarketingPage() {
   const handleDemoSubmit = async (formData) => {
@@ -295,9 +298,9 @@ export default function DigitalMarketingPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-6">
                   India's Best Digital Marketing Agency
-                </h2>
+                </h1>
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   Driving digital success with effective social media marketing and cutting-edge SEO Services
                 </p>
