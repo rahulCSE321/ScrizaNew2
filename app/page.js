@@ -53,6 +53,8 @@ export default function App() {
   // Blog slider state
   const [currentBlogSlide, setCurrentBlogSlide] = useState(0) 
   const [blogSlidesPerView, setBlogSlidesPerView] = useState(3)
+  const [isMobile, setIsMobile] = useState(false)
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false)
 
   // Blog slider functions
   const nextBlogSlide = () => {
@@ -69,10 +71,13 @@ export default function App() {
     setCurrentBlogSlide(index)
   }
 
-  // Responsive blog slides per view
+  // Responsive blog slides per view and mobile detection
   useEffect(() => {
-    const updateBlogSlidesPerView = () => {
-      if (window.innerWidth < 768) {
+    const updateViewportSettings = () => {
+      const isMobileView = window.innerWidth < 768
+      setIsMobile(isMobileView)
+      
+      if (isMobileView) {
         setBlogSlidesPerView(1)
       } else if (window.innerWidth < 1024) {
         setBlogSlidesPerView(2)
@@ -81,9 +86,17 @@ export default function App() {
       }
     }
 
-    updateBlogSlidesPerView()
-    window.addEventListener('resize', updateBlogSlidesPerView)
-    return () => window.removeEventListener('resize', updateBlogSlidesPerView)
+    updateViewportSettings()
+    window.addEventListener('resize', updateViewportSettings)
+    return () => window.removeEventListener('resize', updateViewportSettings)
+  }, [])
+
+  // Preload hero background image
+  useEffect(() => {
+    const img = new Image()
+    img.onload = () => setHeroImageLoaded(true)
+    img.onerror = () => setHeroImageLoaded(false)
+    img.src = 'https://images.unsplash.com/photo-1639008941804-a5d716bd5187?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwb2ZmaWNlfGVufDB8fHxibHVlfDE3NTQwMzA2MDF8MA&ixlib=rb-4.1.0&q=85'
   }, [])
 
   // Auto-play functionality for blog slider
@@ -317,12 +330,24 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="home" className="relative py-16 lg:py-20 overflow-hidden min-h-screen flex items-start">
+        {/* Background Image with Mobile Optimization */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-50"
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            heroImageLoaded ? 'opacity-50' : 'opacity-0'
+          } ${isMobile ? 'bg-scroll' : 'lg:bg-fixed'}`}
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1639008941804-a5d716bd5187?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwb2ZmaWNlfGVufDB8fHxibHVlfDE3NTQwMzA2MDF8MA&ixlib=rb-4.1.0&q=85)'
+            backgroundImage: heroImageLoaded 
+              ? 'url(https://images.unsplash.com/photo-1639008941804-a5d716bd5187?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwb2ZmaWNlfGVufDB8fHxibHVlfDE3NTQwMzA2MDF8MA&ixlib=rb-4.1.0&q=85)'
+              : 'none',
+            minHeight: '100vh',
+            willChange: 'auto',
+            transform: isMobile ? 'translateZ(0)' : 'none'
           }}
         ></div>
+        {/* Enhanced Fallback Background for Mobile */}
+        <div className={`absolute inset-0 bg-gradient-to-br from-blue-50 via-gray-50 to-blue-100 transition-opacity duration-1000 ${
+          heroImageLoaded ? 'opacity-30 md:opacity-0' : 'opacity-90'
+        }`}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#38857a]/20 to-[#FF914C]/20"></div>
         <div className="container mx-auto px-4 relative z-10 pt-4">
           <div className="max-w-4xl mx-auto text-center">
