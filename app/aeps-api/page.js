@@ -193,12 +193,18 @@ export default function AepsApiPage() {
 
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="w-full">
+        <div className="relative w-full">
           <img 
-            src="/Group 1000001994.png" 
+            src="/AEPSAPI1.png" 
             alt="AePS API - Aadhaar Enabled Payment System" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
+            
           />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h1 className="text-5xl font-bold text-black">
+              AEPS API
+            </h1>
+          </div>
         </div>
       </section>
 
@@ -210,9 +216,9 @@ export default function AepsApiPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Introduction */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h1 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Best AePS API Service Provider
-                </h1>
+                </h2>
                 <p className="text-xl text-[#38857a] font-semibold mb-6">
                   India's most trusted low investment Aadhar-enabled payment technology
                 </p>

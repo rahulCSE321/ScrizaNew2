@@ -208,7 +208,7 @@ export default function HrmsSoftwarePage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/HRM.png" 
+            src="/HR.png" 
             alt="HRMS Software" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />

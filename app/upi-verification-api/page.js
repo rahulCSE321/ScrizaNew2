@@ -101,7 +101,7 @@ export default function UPIVerificationAPIPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
+        }, 
         body: JSON.stringify({
           ...formData,
           type: 'demo',

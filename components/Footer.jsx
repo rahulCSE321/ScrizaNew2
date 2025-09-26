@@ -9,6 +9,7 @@ import {
   Shield,
   Award
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -42,10 +43,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6" style={{color: '#FF914C'}}>Quick Links</h3>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Portfolio</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Career</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-[#38857a] transition-colors">API Documentation</a></li>
+              <li><Link href="/portfolio" className="hover:text-[#38857a] transition-colors">Portfolio</Link></li>
+              <li><Link href="/career" className="hover:text-[#38857a] transition-colors">Career</Link></li>
+              <li><Link href="/blog" className="hover:text-[#38857a] transition-colors">Blog</Link></li>
+              <li><Link href="/api-intregation" className="hover:text-[#38857a] transition-colors">API Documentation</Link></li>
             </ul>
             <h4 className="text-lg font-semibold mt-8 mb-4" style={{color: '#FF914C'}}>Our Services</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
@@ -107,10 +108,10 @@ export default function Footer() {
               © 2024 Scriza Pvt Ltd. All Rights Reserved.
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs md:text-sm text-gray-400">
-              <a href="privacy-policy" className="hover:text-[#38857a] transition-colors">Privacy Policy</a>
-              <a href="term-conditions" className="hover:text-[#38857a] transition-colors">Terms and Conditions</a>
-              <a href="refund-and-cancellation-policy" className="hover:text-[#38857a] transition-colors">Refund & Cancellation Policy</a>
-              <a href="#" className="hover:text-[#38857a] transition-colors">Sitemap</a>
+              <Link href="/privacy-policy" className="hover:text-[#38857a] transition-colors">Privacy Policy</Link>
+              <Link href="/term-conditions" className="hover:text-[#38857a] transition-colors">Terms and Conditions</Link>
+              <Link href="/refund-and-cancellation-policy" className="hover:text-[#38857a] transition-colors">Refund & Cancellation Policy</Link>
+              <Link href="/sitemap" className="hover:text-[#38857a] transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

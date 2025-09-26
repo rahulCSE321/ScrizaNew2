@@ -164,10 +164,15 @@ export default function MicroAtmMachineProvidersPage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img 
-            src="/Group 1000001995.png" 
+            src="/MicroATM.png" 
             alt="Micro ATM Machine API Providers" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />
+          <div className="absolute inset-0 flex items-center justify-start pl-8">
+            <h1 className="text-5xl font-bold text-black">
+              Micro ATM Machine API Providers
+            </h1>
+          </div>
         </div>
       </section>
 

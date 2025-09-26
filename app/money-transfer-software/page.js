@@ -137,10 +137,15 @@ export default function MoneyTransferSoftwarePage() {
       <section className="relative w-full overflow-hidden">
         <div className="w-full">
           <img
-            src="/moneyTransfer.png"
+            src="/MoneyTransferSoftware1.png"
             alt="Money Transfer Software"
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100"
           />
+          <div className="absolute inset-0 flex items-center justify-start pl-8">
+            <h1 className="text-5xl font-bold text-black">
+              Money Transfer Software
+            </h1>
+          </div>
         </div>
       </section>
       {/* Main Content */}

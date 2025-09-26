@@ -175,12 +175,17 @@ export default function SchoolManagementSoftwarePage() {
 
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="w-full">
+        <div className="relative w-full">
           <img 
-            src="/schoolManagement.png" 
+            src="/SchoolManagementSoftware.png" 
             alt="School Management Software" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />
+          <div className="absolute inset-0 flex items-center justify-start pl-8">
+            <h1 className="text-5xl font-bold text-black">
+              School Management Software
+            </h1>
+          </div>
         </div>
       </section>
 

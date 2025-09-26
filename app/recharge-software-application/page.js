@@ -10,6 +10,7 @@ import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
 import FAQ from '@/components/FAQ'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { 
   Users, 
   Star,
@@ -21,7 +22,9 @@ import {
   Lock,
   Headphones,
   Palette,
-  Send
+  Send,
+  Home,
+  Globe
 } from 'lucide-react'
 
 
@@ -115,6 +118,22 @@ export default function RechargeSoftwarePage() {
     }
   ]
 
+  const breadcrumbItems = [
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-4 w-4" style={{color: '#38857a'}} />
+    },
+   
+    {
+      label: "Products",
+      icon: <Globe className="h-4 w-4" style={{color: '#38857a'}} />
+    },
+    {
+      label: "Recharge Software"
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       <Header currentPage="recharge" />
@@ -132,9 +151,7 @@ export default function RechargeSoftwarePage() {
             <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
-                  <a href="/" className="hover:text-[#38857a] transition-colors">Home</a>
-                  <span>/</span>
-                  <span className="text-[#38857a] font-semibold">Recharge Software</span>
+                  <Breadcrumb items={breadcrumbItems} />
                 </div>
                 
                 <div className="space-y-4">

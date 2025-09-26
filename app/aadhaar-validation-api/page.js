@@ -7,6 +7,7 @@ import ChatWidget from '@/components/ChatWidget'
 import DemoBookingForm from '@/components/DemoBookingForm'
 import Certification from '@/components/Certification'
 import FAQ from '@/components/FAQ'
+import { Breadcrumb } from '@/components/Breadcrumb'
 
 import {
   CheckCircle,
@@ -152,6 +153,21 @@ export default function AadhaarValidationAPIPage() {
       icon: <DollarSign className="h-6 w-6" />,
       title: "Affordable price range",
       description: "Verify the credible customers digitally with our affordable API technology. Surely a feasible option for enterprises looking for a trusted and reasonably priced solution"
+    }
+  ]
+
+  const breadcrumbItems = [
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-4 w-4" />
+    },
+    {
+      label: "Products",
+      icon: <Globe className="h-4 w-4" />
+        },
+    {
+      label: "Aadhaar Validation API"
     }
   ]
 

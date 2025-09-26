@@ -10,6 +10,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import Certification from '@/components/Certification'
+import { BreadcrumbLight } from '@/components/Breadcrumb' // Import the breadcrumb component
 import { 
   Phone, 
   Mail, 
@@ -22,7 +23,8 @@ import {
   X,
   Shield,
   Award,
-  Send
+  Send,
+  Home
 } from 'lucide-react'
 
 
@@ -76,6 +78,17 @@ export default function ContactPage() {
     }
   }
 
+  const breadcrumbItems = [
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-4 w-4" />
+    },
+    {
+      label: "Contact Us"
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       <Header currentPage="contact" />
@@ -96,10 +109,8 @@ export default function ContactPage() {
               <Badge variant="outline" className="text-white border-white text-lg px-6 py-2">
                 Contact
               </Badge>
-              <div className="flex items-center justify-center space-x-2 text-sm text-white/80">
-                <a href="/" className="hover:text-white transition-colors">Home</a>
-                <span>/</span>
-                <span className="text-white">Contact Us</span>
+              <div className="flex justify-center">
+                <BreadcrumbLight items={breadcrumbItems} />
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Have questions - 

@@ -202,12 +202,17 @@ export default function PayoutApiServicePage() {
 
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="w-full">
+        <div className="relative w-full">
           <img 
-            src="/Group 1000001997.png" 
+            src="/PayoutAPI.png" 
             alt="Payout API Service" 
             className="w-full h-auto max-h-[500px] object-contain object-center bg-gray-100" 
           />
+          <div className="absolute inset-0 flex items-center justify-start pl-8">
+            <h1 className="text-5xl font-bold text-black">
+              Payout API Service
+            </h1>
+          </div>
         </div>
       </section>
 

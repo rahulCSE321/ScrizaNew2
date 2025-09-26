@@ -2,9 +2,11 @@
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export default function FAQ({ title = "Frequently Asked Questions", faqs = [] }) {
   const [openItems, setOpenItems] = useState(new Set())
+  const router = useRouter()
 
   const toggleItem = (index) => {
     const newOpenItems = new Set(openItems)
@@ -97,7 +99,7 @@ export default function FAQ({ title = "Frequently Asked Questions", faqs = [] })
                 Chat on WhatsApp
               </button>
               <button
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => router.push('/contact')}
                 className="px-6 py-3 bg-[#38857a] hover:bg-[#38857a]/90 text-white font-medium rounded-lg transition-colors duration-200"
               >
                 Contact Us

@@ -8,6 +8,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 import Certification from '@/components/Certification'
+import { BreadcrumbLight } from '@/components/Breadcrumb' // Import the breadcrumb component
+
 import { 
   Phone, 
   Mail, 
@@ -27,7 +29,8 @@ import {
   X,
   CheckCircle,
   Zap,
-  Building
+  Building,
+  Home
 } from 'lucide-react'
 
 export default function AboutPage() {
@@ -74,6 +77,18 @@ export default function AboutPage() {
     "You won't want to leave once it's done: We treat every client like family, so there's no doubt that we'll be working with each other again in the future!"
   ]
 
+  // Define breadcrumb items
+  const breadcrumbItems = [
+    {
+      label: "Home",
+      href: "/",
+      icon: <Home className="h-4 w-4" />
+    },
+    {
+      label: "About Us"
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       <Header currentPage="about" />
@@ -94,11 +109,12 @@ export default function AboutPage() {
               <Badge variant="outline" className="text-white border-white text-lg px-6 py-2">
                 About
               </Badge>
-              <div className="flex items-center justify-center space-x-2 text-sm text-white/80">
-                <a href="/" className="hover:text-white transition-colors">Home</a>
-                <span>/</span>
-                <span className="text-white">About Us</span>
+              
+              {/* Updated Breadcrumb */}
+              <div className="flex justify-center">
+                <BreadcrumbLight items={breadcrumbItems} />
               </div>
+              
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
                 We Core Your 
                 <span className="block" style={{color: '#FF914C'}}>Future</span>
@@ -288,32 +304,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      {/* <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center items-center space-x-12">
-            <div className="flex items-center space-x-4">
-              <div className="bg-gray-100 p-4 rounded-lg">
-                <Shield className="h-8 w-8 text-[#38857a]" />
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-gray-900">Certification Number</div>
-                <div className="text-[#38857a] font-bold">QMS220756</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="bg-gray-100 p-4 rounded-lg">
-                <Award className="h-8 w-8 text-[#FF914C]" />
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-gray-900">Certification Number</div>
-                <div className="text-[#FF914C] font-bold">ISMS220754</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <Certification />
       <Footer />
       <ChatWidget />

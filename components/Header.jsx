@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Breadcrumb } from '@/components/Breadcrumb'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { 
   Menu, 
   X, 
@@ -11,7 +14,9 @@ import {
   ChevronDown,
   Sparkles,
   Zap,
-  ArrowRight
+  ArrowRight,
+  Home,
+  Globe
 } from 'lucide-react'
 
 export default function ModernHeader({ currentPage = "home" }) {
@@ -19,6 +24,7 @@ export default function ModernHeader({ currentPage = "home" }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +47,11 @@ export default function ModernHeader({ currentPage = "home" }) {
   }
 
   const handleDropdownLeave = () => {
+    setActiveDropdown(null)
+  }
+
+  const handleMobileLinkClick = () => {
+    setIsMenuOpen(false)
     setActiveDropdown(null)
   }
 
@@ -67,6 +78,42 @@ export default function ModernHeader({ currentPage = "home" }) {
       console.error('Error:', error)
       alert('Something went wrong. Please try again.')
     }
+  }
+
+  function formatSegmentTitle(segment) {
+    if (!segment) return ''
+    return segment
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase())
+  }
+
+  const coreServiceSlugs = new Set([
+    'custom-software-development',
+    'website-design-service',
+    'software-development-service',
+    'application-development-service',
+    'digital-marketing-service',
+  ])
+
+  const standaloneSlugs = new Set([
+    'about',
+    'contact',
+  ])
+
+  const labelOverrides = {
+    about: 'About Us',
+    contact: 'Contact Us',
+    'website-design-service': 'Website Design',
+    'software-development-service': 'Software Development',
+    'application-development-service': 'Application Development',
+    'digital-marketing-service': 'Digital Marketing',
+    'custom-software-development': 'Custom Software Development',
+  }
+
+  function getDisplayLabel(slug) {
+    if (!slug) return ''
+    if (labelOverrides[slug]) return labelOverrides[slug]
+    return formatSegmentTitle(slug)
   }
 
   return (
@@ -98,15 +145,15 @@ export default function ModernHeader({ currentPage = "home" }) {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-4 group">
+            <Link href="/" className="flex items-center space-x-4 group">
               <div className="relative">
                 <img 
                   src="/Scriza (1).svg" 
                   alt="Scriza Logo" 
-                  className="relative h-10 sm:h-14 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-lg"
+                  className="relative h-10 sm:h-14 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-lg cursor-pointer"
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
@@ -284,7 +331,7 @@ export default function ModernHeader({ currentPage = "home" }) {
           </div>
 
           {/* Enhanced Mobile Menu */}
-          <div className={`lg:hidden transition-all duration-500 ${
+          <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
             isMenuOpen 
               ? 'max-h-screen opacity-100 visible' 
               : 'max-h-0 opacity-0 invisible'
@@ -297,12 +344,109 @@ export default function ModernHeader({ currentPage = "home" }) {
                 <MobileNavLink href="/about" page="about" currentPage={currentPage}>
                   About Us
                 </MobileNavLink>
-                <MobileNavLink href="/#products">
-                  Our Products
-                </MobileNavLink>
-                <MobileNavLink href="/#services">
-                  Core Services
-                </MobileNavLink>
+                
+                {/* Mobile Products Dropdown */}
+                <div className="w-full">
+                  <button 
+                    onClick={() => setActiveDropdown(activeDropdown === 'products' ? null : 'products')}
+                    className="flex items-center justify-between w-full text-gray-700 hover:text-[#38857a] transition-colors py-3 px-4 rounded-lg font-medium text-left"
+                  >
+                    <span>Our Products</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      activeDropdown === 'products' ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                  
+                  {/* Mobile Products Content */}
+                  <div className={`overflow-hidden transition-all duration-300 ${
+                    activeDropdown === 'products' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="pl-4 pr-4 pb-4 space-y-3">
+                      <div className="grid grid-cols-1 gap-3 max-h-80 overflow-y-auto">
+                        {/* Products Section */}
+                        <div className="space-y-2">
+                          <h4 className="text-xs font-semibold text-[#38857a] uppercase tracking-wider">Products</h4>
+                          <Link href="/recharge-software-application" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Recharge Software</Link>
+                          <Link href="/money-transfer-software" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Money Transfer Software</Link>
+                          <Link href="/hotel-management-software" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Hotel Management Software</Link>
+                          <Link href="/crm" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">CRM Software</Link>
+                          <Link href="/hrms-software" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">HRMS Software</Link>
+                          <Link href="/custom-software-development" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Custom Software Development</Link>
+                          <Link href="/school-management-software" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">School Management Software</Link>
+                        </div>
+                        
+                        {/* Banking Services Section */}
+                        <div className="space-y-2 mt-4">
+                          <h4 className="text-xs font-semibold text-[#38857a] uppercase tracking-wider">Banking Services</h4>
+                          <Link href="/aeps-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">AEPS Api</Link>
+                          <Link href="/micro-atm-machine-providers" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">MATM-POSM Api</Link>
+                          <Link href="/pancard-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Pan Card Api</Link>
+                          <Link href="/payout-api-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Payout Api</Link>
+                          <Link href="/pay-in-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Pay In Service</Link>
+                          <Link href="/upi-collection-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">UPI Collection API</Link>
+                          <Link href="/credit-card-billpay-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Credit Card BillPay Api</Link>
+                        </div>
+                        
+                        {/* Other Services Section */}
+                        <div className="space-y-2 mt-4">
+                          <h4 className="text-xs font-semibold text-[#38857a] uppercase tracking-wider">Other Services</h4>
+                          <Link href="/recharge-api-provider" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Recharge Api</Link>
+                          <Link href="/bbps-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">BBPS Api</Link>
+                          <Link href="/lic-premium-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">LIC Premium Pay Api</Link>
+                          <Link href="/verification-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Validation API</Link>
+                          <Link href="/sms-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">SMS API</Link>
+                          <Link href="/whatsapp-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">WhatsApp API</Link>
+                        </div>
+                        
+                        {/* Travel Api Section */}
+                        <div className="space-y-2 mt-4">
+                          <h4 className="text-xs font-semibold text-[#38857a] uppercase tracking-wider">Travel Api</h4>
+                          <Link href="/bus-booking-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Bus Booking API</Link>
+                          <Link href="/hotel-booking-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Hotel Booking API</Link>
+                          <Link href="/air-booking-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Air Booking API</Link>
+                        </div>
+                        
+                        {/* Verification Api Section */}
+                        <div className="space-y-2 mt-4">
+                          <h4 className="text-xs font-semibold text-[#38857a] uppercase tracking-wider">Verification Api</h4>
+                          <Link href="/bank-account-verification-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Bank Ac Verification API</Link>
+                          <Link href="/upi-verification-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">UPI ID Verification API</Link>
+                          <Link href="/aadhaar-validation-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Aadhaar Verification API</Link>
+                          <Link href="/voter-ID-verification-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Voter Id Verification API</Link>
+                          <Link href="/driving-licence-verification-api" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Driving License Verification</Link>
+                          <Link href="/vehicle-rc-verification" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-1 pl-2">Vehicle RC Verification API</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Mobile Services Dropdown */}
+                <div className="w-full">
+                  <button 
+                    onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
+                    className="flex items-center justify-between w-full text-gray-700 hover:text-[#38857a] transition-colors py-3 px-4 rounded-lg font-medium text-left"
+                  >
+                    <span>Core Services</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      activeDropdown === 'services' ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                  
+                  {/* Mobile Services Content */}
+                  <div className={`overflow-hidden transition-all duration-300 ${
+                    activeDropdown === 'services' ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="pl-4 pr-4 pb-4 space-y-3">
+                      <Link href="/custom-software-development" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-2 pl-2 border-l-2 border-transparent hover:border-[#38857a]">Custom Software Development</Link>
+                      <Link href="/website-design-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-2 pl-2 border-l-2 border-transparent hover:border-[#38857a]">Website Design</Link>
+                      <Link href="/software-development-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-2 pl-2 border-l-2 border-transparent hover:border-[#38857a]">Software Development</Link>
+                      <Link href="/application-development-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-2 pl-2 border-l-2 border-transparent hover:border-[#38857a]">Application Development</Link>
+                      <Link href="/digital-marketing-service" onClick={handleMobileLinkClick} className="block text-sm text-gray-600 hover:text-[#38857a] py-2 pl-2 border-l-2 border-transparent hover:border-[#38857a]">Digital Marketing</Link>
+                    </div>
+                  </div>
+                </div>
+                
                 <MobileNavLink href="/contact" page="contact" currentPage={currentPage}>
                   Contact Us
                 </MobileNavLink>
@@ -326,6 +470,36 @@ export default function ModernHeader({ currentPage = "home" }) {
           </div>
         </div>
       </header>
+
+      {/* Global Breadcrumb Bar (hidden on home) */}
+      {pathname !== '/' && (() => {
+        const segments = pathname?.split('/').filter(Boolean)
+        const last = segments?.slice(-1)[0]
+        const middleCrumb = coreServiceSlugs.has(last)
+          ? { label: 'Core Services' }
+          : standaloneSlugs.has(last)
+            ? null
+            : { label: 'Products' }
+
+        const items = [
+          {
+            label: 'Home',
+            href: '/',
+            icon: <Home className="h-4 w-4" style={{color: '#38857a'}} />
+          },
+          ...(middleCrumb ? [middleCrumb] : []),
+          {
+            label: getDisplayLabel(last)
+          }
+        ]
+        return (
+        <div className="bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-4 py-3">
+            <Breadcrumb items={items} />
+          </div>
+        </div>
+        )
+      })()}
 
       {/* Demo Modal */}
       <Dialog open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen}>
@@ -427,7 +601,7 @@ function NavLink({ href, page, currentPage, children }) {
   const isActive = currentPage === page
   
   return (
-    <a 
+    <Link 
       href={href} 
       className={`relative text-gray-700 hover:text-[#38857a] transition-all duration-300 font-medium group ${
         isActive ? 'text-[#38857a]' : ''
@@ -440,7 +614,7 @@ function NavLink({ href, page, currentPage, children }) {
       {isActive && (
         <div className="absolute inset-0 bg-gradient-to-r from-[#38857a]/10 to-[#FF914C]/10 rounded-lg -z-10"></div>
       )}
-    </a>
+    </Link>
   )
 }
 
@@ -449,7 +623,7 @@ function MobileNavLink({ href, page, currentPage, children }) {
   const isActive = currentPage === page
   
   return (
-    <a 
+    <Link 
       href={href} 
       className={`relative py-3 px-4 rounded-lg transition-all duration-300 font-medium ${
         isActive 
@@ -461,7 +635,7 @@ function MobileNavLink({ href, page, currentPage, children }) {
       {isActive && (
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-[#38857a] to-[#FF914C] rounded-r"></div>
       )}
-    </a>
+    </Link>
   )
 }
 
@@ -483,13 +657,13 @@ function DropdownSection({ title, children }) {
 function DropdownLink({ href, children }) {
   return (
     <li>
-      <a 
+      <Link 
         href={href} 
         className="text-gray-600 hover:text-[#38857a] text-sm transition-all duration-300 flex items-center space-x-2 group hover:translate-x-1"
       >
         <div className="w-1.5 h-1.5 bg-gradient-to-r from-[#38857a] to-[#FF914C] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <span>{children}</span>
-      </a>
+      </Link>
     </li>
   )
 }
